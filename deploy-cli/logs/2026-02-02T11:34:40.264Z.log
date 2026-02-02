@@ -1,0 +1,28 @@
+{"level":30,"time":1770032080282,"msg":"========================================"}
+{"level":30,"time":1770032080284,"msg":"FaucetAMM Contract Deployment on PREVIEW NETWORK"}
+{"level":30,"time":1770032080284,"msg":"========================================"}
+{"level":30,"time":1770032080284,"msg":"Step 1: Initializing wallet from mnemonic..."}
+{"level":30,"time":1770032080285,"msg":"Building wallet from mnemonic..."}
+{"level":30,"time":1770032080404,"msg":"Your wallet address: mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm"}
+{"level":30,"time":1770032080404,"msg":"Waiting for wallet to sync..."}
+{"level":30,"time":1770032080412,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1770032111759,"msg":"Waiting for wallet sync. Synced: true"}
+{"level":30,"time":1770032111767,"msg":"DEBUG: Wallet synced, checking balances..."}
+{"level":30,"time":1770032111784,"msg":"Unshielded balance: 1000000000 tSTAR"}
+{"level":30,"time":1770032111784,"msg":"Shielded balance: 0 tSTAR"}
+{"level":30,"time":1770032111784,"msg":"Total balance: 1000000000 tSTAR"}
+{"level":30,"time":1770032111786,"msg":"DEBUG: Total balance: 1000000000"}
+{"level":30,"time":1770032111786,"msg":"DEBUG: Starting dust registration..."}
+{"level":30,"time":1770032111792,"section":"DUST Registration Debug","availableCoinsCount":1,"dustBalance":1925491771000000000,"coinsMeta":[{"registeredForDustGeneration":true,"hasMetaField":true}]}
+{"level":30,"time":1770032111793,"msg":"All Night UTXOs are already registered for dust generation"}
+{"level":30,"time":1770032111793,"msg":"Current dust balance: 1925491771000000000"}
+{"level":30,"time":1770032111795,"msg":"DEBUG: Dust registration complete."}
+{"level":30,"time":1770032111796,"msg":"Step 2: Configuring providers..."}
+{"level":30,"time":1770032111800,"section":"DUST Wallet State","dust":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{}},"protocolVersion":0,"state":{"networkId":"preview","pendingDustTokens":[],"progress":{"appliedIndex":596,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":596,"isConnected":true},"protocolVersion":0,"publicKey":{"publicKey":15910875447565964891213978322799052612442083852947537543067608621265097140841},"state":{"__wbg_ptr":8370144}}}}
+{"level":30,"time":1770032111800,"section":"Shielded Wallet State","shielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"coinHashes":{},"networkId":"preview","progress":{"appliedIndex":482,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":482,"isConnected":true},"protocolVersion":0,"publicKeys":{"coinPublicKey":"e1aa86317907c717908b15a9b480774a2ede12a95217dc8bff486be9664e2717","encryptionPublicKey":"b4732bf85983ed47631e2bd2ee918918ba3a3f2a67fdf17412d41280d065f3c8"},"state":{"__wbg_ptr":5149904},"txHistoryArray":[]}}}
+{"level":30,"time":1770032111801,"section":"Unshielded Wallet State","unshielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"networkId":"preview","progress":{"appliedId":246,"highestTransactionId":246,"isConnected":true},"protocolVersion":0,"publicKey":{"address":"mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm","addressHex":"f6dbd732b049eb493aa3fe43f2c77103ef0f66c19af067a26280ec3fa866aeb3","publicKey":"9f53d5c876fa6229cba7361c35d709c7d1c0334c0c29ae4f199750c9a3244e92"},"state":{"availableUtxos":{"_id":"HashMap","values":["[Array]"]},"pendingUtxos":{"_id":"HashMap","values":[]}}}}}
+{"level":30,"time":1770032111805,"msg":"Step 3: Deploying FaucetAMM contract..."}
+{"level":30,"time":1770032111806,"msg":"Deploying FaucetAMM contract with feeBps = 10..."}
+{"level":50,"time":1770032112880,"msg":"Deployment failed:"}
+{"level":50,"time":1770032112880,"msg":"Both transactions need to be of the same type."}
+{"level":50,"time":1770032112883,"msg":"Error: Both transactions need to be of the same type.\n    at __wbg_Error_e17e777aac105295 (file:///media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/ledger-v7/midnight_ledger_wasm_bg.js:9218:17)\n    at wasm://wasm/027d23ae:wasm-function[14394]:0x6539e0\n    at wasm://wasm/027d23ae:wasm-function[11357]:0x5d4ac5\n    at Transaction.merge (file:///media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/ledger-v7/midnight_ledger_wasm_bg.js:6969:26)\n    at WalletFacade.mergeUnprovenTransactions (file:///media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/wallet-sdk-facade/dist/index.js:56:22)\n    at WalletFacade.balanceUnprovenTransaction (file:///media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/wallet-sdk-facade/dist/index.js:164:33)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Object.balanceTx (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/src/api.ts:180:35)\n    at async submitTxCore (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/midnight-js-contracts/src/submit-tx.ts:101:20)\n    at async submitTx (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/midnight-js-contracts/src/submit-tx.ts:150:16)"}

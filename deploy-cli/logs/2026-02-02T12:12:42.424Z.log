@@ -1,0 +1,30 @@
+{"level":30,"time":1770034362441,"msg":"========================================"}
+{"level":30,"time":1770034362443,"msg":"FaucetAMM CLI"}
+{"level":30,"time":1770034362443,"msg":"========================================"}
+{"level":30,"time":1770034362443,"msg":"Step 1: Initializing wallet..."}
+{"level":30,"time":1770034362443,"msg":"Building wallet from mnemonic..."}
+{"level":30,"time":1770034362557,"msg":"Your wallet address: mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm"}
+{"level":30,"time":1770034362557,"msg":"Waiting for wallet to sync..."}
+{"level":30,"time":1770034362565,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1770034394888,"msg":"Waiting for wallet sync. Synced: true"}
+{"level":30,"time":1770034394891,"msg":"DEBUG: Wallet synced, checking balances..."}
+{"level":30,"time":1770034394905,"msg":"Unshielded balance: 1000000000 tSTAR"}
+{"level":30,"time":1770034394905,"msg":"Shielded balance: 0 tSTAR"}
+{"level":30,"time":1770034394906,"msg":"Total balance: 1000000000 tSTAR"}
+{"level":30,"time":1770034394907,"msg":"DEBUG: Total balance: 1000000000"}
+{"level":30,"time":1770034394907,"msg":"DEBUG: Starting dust registration..."}
+{"level":30,"time":1770034394913,"section":"DUST Registration Debug","availableCoinsCount":1,"dustBalance":1944065331999999999,"coinsMeta":[{"registeredForDustGeneration":true,"hasMetaField":true}]}
+{"level":30,"time":1770034394914,"msg":"All Night UTXOs are already registered for dust generation"}
+{"level":30,"time":1770034394914,"msg":"Current dust balance: 1944065331999999999"}
+{"level":30,"time":1770034394916,"msg":"DEBUG: Dust registration complete."}
+{"level":30,"time":1770034394917,"msg":"Step 2: Configuring providers..."}
+{"level":30,"time":1770034394921,"section":"DUST Wallet State","dust":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{}},"protocolVersion":0,"state":{"networkId":"preview","pendingDustTokens":[],"progress":{"appliedIndex":600,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":600,"isConnected":true},"protocolVersion":0,"publicKey":{"publicKey":15910875447565964891213978322799052612442083852947537543067608621265097140841},"state":{"__wbg_ptr":8127024}}}}
+{"level":30,"time":1770034394922,"section":"Shielded Wallet State","shielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"coinHashes":{},"networkId":"preview","progress":{"appliedIndex":482,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":482,"isConnected":true},"protocolVersion":0,"publicKeys":{"coinPublicKey":"e1aa86317907c717908b15a9b480774a2ede12a95217dc8bff486be9664e2717","encryptionPublicKey":"b4732bf85983ed47631e2bd2ee918918ba3a3f2a67fdf17412d41280d065f3c8"},"state":{"__wbg_ptr":5372544},"txHistoryArray":[]}}}
+{"level":30,"time":1770034394922,"section":"Unshielded Wallet State","unshielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"networkId":"preview","progress":{"appliedId":246,"highestTransactionId":246,"isConnected":true},"protocolVersion":0,"publicKey":{"address":"mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm","addressHex":"f6dbd732b049eb493aa3fe43f2c77103ef0f66c19af067a26280ec3fa866aeb3","publicKey":"9f53d5c876fa6229cba7361c35d709c7d1c0334c0c29ae4f199750c9a3244e92"},"state":{"availableUtxos":{"_id":"HashMap","values":["[Array]"]},"pendingUtxos":{"_id":"HashMap","values":[]}}}}}
+{"level":30,"time":1770034394927,"msg":"Step 3: Finding contract at a7e34c5770ad29a7eec69e93f209eb932a6161aaab36e64c6241abb203c765db..."}
+{"level":30,"time":1770034396880,"msg":"Joined contract at address: a7e34c5770ad29a7eec69e93f209eb932a6161aaab36e64c6241abb203c765db"}
+{"level":30,"time":1770034396881,"msg":"Contract found! Executing command..."}
+{"level":30,"time":1770034396881,"msg":"Minting 1000000 Test Token X..."}
+{"level":50,"time":1770034397145,"msg":"Command failed:"}
+{"level":50,"time":1770034397145,"msg":"Unexpected error executing scoped transaction '<unnamed>': Error: type error: mintTestTokensX argument 3 (argument 4 as invoked from Typescript) at FaucetAMM.compact line 35 char 1; expected value of type Bytes<32> but received '8cadc84b54f89d9af05cb2ec9ee9fbd6452d3bcc4cdfa915630c929ae2fc80e6'"}
+{"level":50,"time":1770034397148,"msg":"Error: Unexpected error executing scoped transaction '<unnamed>': Error: type error: mintTestTokensX argument 3 (argument 4 as invoked from Typescript) at FaucetAMM.compact line 35 char 1; expected value of type Bytes<32> but received '8cadc84b54f89d9af05cb2ec9ee9fbd6452d3bcc4cdfa915630c929ae2fc80e6'\n    at scoped (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/midnight-js-contracts/src/internal/transaction.ts:183:21)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async run (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/src/interact.ts:119:34)"}

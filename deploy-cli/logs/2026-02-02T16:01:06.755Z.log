@@ -1,0 +1,45 @@
+{"level":30,"time":1770048066768,"msg":"========================================"}
+{"level":30,"time":1770048066770,"msg":"FaucetAMM Contract Deployment on PREVIEW NETWORK"}
+{"level":30,"time":1770048066770,"msg":"========================================"}
+{"level":30,"time":1770048066770,"msg":"Step 1: Initializing wallet from mnemonic..."}
+{"level":30,"time":1770048066770,"msg":"Building wallet from mnemonic..."}
+{"level":30,"time":1770048066883,"msg":"Your wallet address: mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm"}
+{"level":30,"time":1770048066884,"msg":"Waiting for wallet to sync..."}
+{"level":30,"time":1770048066891,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1770048071934,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1770048098370,"msg":"Waiting for wallet sync. Synced: true"}
+{"level":30,"time":1770048098378,"msg":"DEBUG: Wallet synced, checking balances..."}
+{"level":30,"time":1770048098390,"msg":"Unshielded balance: 1000000000 tSTAR"}
+{"level":30,"time":1770048098391,"msg":"Shielded balance: 0 tSTAR"}
+{"level":30,"time":1770048098391,"msg":"Total balance: 1000000000 tSTAR"}
+{"level":30,"time":1770048098392,"msg":"DEBUG: Total balance: 1000000000"}
+{"level":30,"time":1770048098392,"msg":"DEBUG: Starting dust registration..."}
+{"level":30,"time":1770048098399,"section":"DUST Registration Debug","availableCoinsCount":6,"dustBalance":2053756299999999987,"coinsMeta":[{"registeredForDustGeneration":false,"hasMetaField":true},{"registeredForDustGeneration":false,"hasMetaField":true},{"registeredForDustGeneration":true,"hasMetaField":true},{"registeredForDustGeneration":false,"hasMetaField":true},{"registeredForDustGeneration":false,"hasMetaField":true},{"registeredForDustGeneration":false,"hasMetaField":true}]}
+{"level":30,"time":1770048098399,"msg":"Found 5 unshielded Night UTXOs not registered for dust generation"}
+{"level":30,"time":1770048098399,"msg":"Registering Night UTXOs for dust generation..."}
+{"level":50,"time":1770048098414,"msg":"Failed to register Night UTXOs for dust: (FiberFailure) Wallet.Other: Other wallet error: Token of a non-Night type received\n    at Object.other (file:///media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/wallet-sdk-shielded/dist/v1/WalletError.js:37:16)\n    at RunningV1Variant.createDustGenerationTransaction (file:///media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/wallet-sdk-dust-wallet/dist/RunningV1Variant.js:82:56)\n    at [V1] (file:///media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/wallet-sdk-dust-wallet/dist/DustWallet.js:98:37)\n    at Module.dispatch (file:///media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/wallet-sdk-utilities/dist/polyFunction.js:7:16)\n    at file:///media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/wallet-sdk-runtime/dist/Runtime.js:50:73\n    at <anonymous> (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/effect/src/internal/fiberRuntime.ts:151:36)\n    at body (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/effect/src/Utils.ts:786:14)\n    at Object.OnSuccess (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/effect/src/internal/fiberRuntime.ts:151:12)\n    at FiberRuntime.Sync (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/effect/src/internal/fiberRuntime.ts:1164:37)\n    at <anonymous> (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/effect/src/internal/fiberRuntime.ts:1393:53) {\n  [cause]: Error: Token of a non-Night type received\n}"}
+{"level":30,"time":1770048098414,"msg":"DEBUG: Dust registration complete."}
+{"level":30,"time":1770048098414,"msg":"Step 2: Configuring providers..."}
+{"level":30,"time":1770048098418,"section":"DUST Wallet State","dust":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{}},"protocolVersion":0,"state":{"networkId":"preview","pendingDustTokens":[],"progress":{"appliedIndex":615,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":615,"isConnected":true},"protocolVersion":0,"publicKey":{"publicKey":15910875447565964891213978322799052612442083852947537543067608621265097140841},"state":{"__wbg_ptr":10391824}}}}
+{"level":30,"time":1770048098418,"section":"Shielded Wallet State","shielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"coinHashes":{},"networkId":"preview","progress":{"appliedIndex":482,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":482,"isConnected":true},"protocolVersion":0,"publicKeys":{"coinPublicKey":"e1aa86317907c717908b15a9b480774a2ede12a95217dc8bff486be9664e2717","encryptionPublicKey":"b4732bf85983ed47631e2bd2ee918918ba3a3f2a67fdf17412d41280d065f3c8"},"state":{"__wbg_ptr":5040192},"txHistoryArray":[]}}}
+{"level":30,"time":1770048098418,"section":"Unshielded Wallet State","unshielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"networkId":"preview","progress":{"appliedId":318,"highestTransactionId":318,"isConnected":true},"protocolVersion":0,"publicKey":{"address":"mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm","addressHex":"f6dbd732b049eb493aa3fe43f2c77103ef0f66c19af067a26280ec3fa866aeb3","publicKey":"9f53d5c876fa6229cba7361c35d709c7d1c0334c0c29ae4f199750c9a3244e92"},"state":{"availableUtxos":{"_id":"HashMap","values":["[Array]","[Array]","[Array]","[Array]","[Array]","[Array]"]},"pendingUtxos":{"_id":"HashMap","values":[]}}}}}
+{"level":30,"time":1770048098423,"msg":"Step 3: Deploying FaucetAMM contract..."}
+{"level":30,"time":1770048098423,"msg":"Deploying FaucetAMMUnshielded contract with feeBps = 10..."}
+{"level":30,"time":1770048098480,"msg":"DEBUG balanceTx: Starting balanceUnboundTransaction..."}
+{"level":30,"time":1770048099515,"msg":"DEBUG balanceTx: Recipe type = UNBOUND_TRANSACTION, has balancingTx = true"}
+{"level":30,"time":1770048099516,"msg":"DEBUG balanceTx: Starting finalizeRecipe..."}
+{"level":30,"time":1770048099907,"msg":"DEBUG balanceTx: finalizeRecipe succeeded"}
+{"level":30,"time":1770048156726,"msg":"Deployed at: 2bed9b1725b9ee54683375aee3bb397abcf55ecfc7468e27ea9cea2b285c0a14"}
+{"level":30,"time":1770048156726,"msg":"========================================"}
+{"level":30,"time":1770048156726,"msg":"DEPLOYMENT SUCCESSFUL!"}
+{"level":30,"time":1770048156726,"msg":"Contract Address: 2bed9b1725b9ee54683375aee3bb397abcf55ecfc7468e27ea9cea2b285c0a14"}
+{"level":30,"time":1770048156726,"msg":"========================================"}
+{"level":30,"time":1770048156726,"msg":"Step 4: Verifying contract state..."}
+{"level":30,"time":1770048156726,"msg":"Checking contract ledger state..."}
+{"level":30,"time":1770048156955,"section":"Ledger State","feeBps":"10","xLiquidity":"0","yLiquidity":"0","lpCirculatingSupply":"0"}
+{"level":30,"time":1770048156955,"msg":"Current state - feeBps: 10, xLiquidity: 0, yLiquidity: 0"}
+{"level":30,"time":1770048156955,"msg":""}
+{"level":30,"time":1770048156955,"msg":"Next steps:"}
+{"level":30,"time":1770048156955,"msg":"1. Use mintTestTokensX/Y to mint test tokens"}
+{"level":30,"time":1770048156955,"msg":"2. Use initLiquidity to initialize the pool"}
+{"level":30,"time":1770048156955,"msg":"3. Use swapXToY/swapYToX to test swaps"}

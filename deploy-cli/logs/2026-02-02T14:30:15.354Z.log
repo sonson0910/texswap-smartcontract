@@ -1,0 +1,44 @@
+{"level":30,"time":1770042615366,"msg":"========================================"}
+{"level":30,"time":1770042615368,"msg":"FaucetAMM CLI"}
+{"level":30,"time":1770042615369,"msg":"========================================"}
+{"level":30,"time":1770042615369,"msg":"Step 1: Initializing wallet..."}
+{"level":30,"time":1770042615369,"msg":"Building wallet from mnemonic..."}
+{"level":30,"time":1770042615485,"msg":"Your wallet address: mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm"}
+{"level":30,"time":1770042615485,"msg":"Waiting for wallet to sync..."}
+{"level":30,"time":1770042615494,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1770042620680,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1770042649116,"msg":"Waiting for wallet sync. Synced: true"}
+{"level":30,"time":1770042649128,"msg":"DEBUG: Wallet synced, checking balances..."}
+{"level":30,"time":1770042649143,"msg":"Unshielded balance: 1000000000 tSTAR"}
+{"level":30,"time":1770042649143,"msg":"Shielded balance: 0 tSTAR"}
+{"level":30,"time":1770042649143,"msg":"Total balance: 1000000000 tSTAR"}
+{"level":30,"time":1770042649145,"msg":"DEBUG: Total balance: 1000000000"}
+{"level":30,"time":1770042649145,"msg":"DEBUG: Starting dust registration..."}
+{"level":30,"time":1770042649150,"section":"DUST Registration Debug","availableCoinsCount":1,"dustBalance":2010809416999999994,"coinsMeta":[{"registeredForDustGeneration":true,"hasMetaField":true}]}
+{"level":30,"time":1770042649151,"msg":"All Night UTXOs are already registered for dust generation"}
+{"level":30,"time":1770042649151,"msg":"Current dust balance: 2010809416999999994"}
+{"level":30,"time":1770042649153,"msg":"DEBUG: Dust registration complete."}
+{"level":30,"time":1770042649155,"msg":"Step 2: Configuring providers..."}
+{"level":30,"time":1770042649158,"section":"DUST Wallet State","dust":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{}},"protocolVersion":0,"state":{"networkId":"preview","pendingDustTokens":[],"progress":{"appliedIndex":608,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":608,"isConnected":true},"protocolVersion":0,"publicKey":{"publicKey":15910875447565964891213978322799052612442083852947537543067608621265097140841},"state":{"__wbg_ptr":8307088}}}}
+{"level":30,"time":1770042649159,"section":"Shielded Wallet State","shielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"coinHashes":{},"networkId":"preview","progress":{"appliedIndex":482,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":482,"isConnected":true},"protocolVersion":0,"publicKeys":{"coinPublicKey":"e1aa86317907c717908b15a9b480774a2ede12a95217dc8bff486be9664e2717","encryptionPublicKey":"b4732bf85983ed47631e2bd2ee918918ba3a3f2a67fdf17412d41280d065f3c8"},"state":{"__wbg_ptr":5351680},"txHistoryArray":[]}}}
+{"level":30,"time":1770042649159,"section":"Unshielded Wallet State","unshielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"networkId":"preview","progress":{"appliedId":246,"highestTransactionId":246,"isConnected":true},"protocolVersion":0,"publicKey":{"address":"mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm","addressHex":"f6dbd732b049eb493aa3fe43f2c77103ef0f66c19af067a26280ec3fa866aeb3","publicKey":"9f53d5c876fa6229cba7361c35d709c7d1c0334c0c29ae4f199750c9a3244e92"},"state":{"availableUtxos":{"_id":"HashMap","values":["[Array]"]},"pendingUtxos":{"_id":"HashMap","values":[]}}}}}
+{"level":30,"time":1770042649164,"msg":"Step 3: Finding contract at db94208dc14fe98f40439286744357583bfb46ff3d0a411df40c2a2d8142a953..."}
+{"level":30,"time":1770042653282,"msg":"Joined contract at address: db94208dc14fe98f40439286744357583bfb46ff3d0a411df40c2a2d8142a953"}
+{"level":30,"time":1770042653283,"msg":"Contract found! Executing command..."}
+{"level":30,"time":1770042653283,"msg":"Minting 1000000 Unshielded Test Token X..."}
+{"level":30,"time":1770042653283,"msg":"Wallet addressHex: f6dbd732b049eb493aa3fe43f2c77103ef0f66c19af067a26280ec3fa866aeb3"}
+{"level":30,"time":1770042653283,"msg":"Debug - Arguments:"}
+{"level":30,"time":1770042653283,"msg":"  amount: 1000000 (type: bigint)"}
+{"level":30,"time":1770042653283,"msg":"  recipient.is_left: false"}
+{"level":30,"time":1770042653283,"msg":"  recipient.right.bytes: f6dbd732b049eb493aa3fe43f2c77103ef0f66c19af067a26280ec3fa866aeb3"}
+{"level":30,"time":1770042653283,"msg":"Contract object keys: deployTxData, callTx, circuitMaintenanceTx, contractMaintenanceTx"}
+{"level":30,"time":1770042653283,"msg":"Contract.callTx available: true"}
+{"level":30,"time":1770042653283,"msg":"Contract.callTx keys: mintTestTokensX, mintTestTokensY"}
+{"level":30,"time":1770042653283,"msg":"Now calling contract.callTx.mintTestTokensX (unshielded)..."}
+{"level":50,"time":1770042653822,"msg":"Transaction failed with error:"}
+{"level":50,"time":1770042653822,"msg":"  Message: Unexpected error submitting scoped transaction '<unnamed>': Error: 'check' returned an error: Error: Failed Proof Server response: url=\"http://127.0.0.1:6300/check\", code=\"400\", status=\"Bad Request\""}
+{"level":50,"time":1770042653822,"msg":"  Cause: {}"}
+{"level":50,"time":1770042653826,"msg":"  Stack: Error: Unexpected error submitting scoped transaction '<unnamed>': Error: 'check' returned an error: Error: Failed Proof Server response: url=\"http://127.0.0.1:6300/check\", code=\"400\", status=\"Bad Request\"\n    at scoped (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/midnight-js-contracts/src/internal/transaction.ts:226:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async run (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/src/interact.ts:143:38)"}
+{"level":50,"time":1770042653826,"msg":"Command failed:"}
+{"level":50,"time":1770042653826,"msg":"Unexpected error submitting scoped transaction '<unnamed>': Error: 'check' returned an error: Error: Failed Proof Server response: url=\"http://127.0.0.1:6300/check\", code=\"400\", status=\"Bad Request\""}
+{"level":50,"time":1770042653826,"msg":"Error: Unexpected error submitting scoped transaction '<unnamed>': Error: 'check' returned an error: Error: Failed Proof Server response: url=\"http://127.0.0.1:6300/check\", code=\"400\", status=\"Bad Request\"\n    at scoped (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/midnight-js-contracts/src/internal/transaction.ts:226:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async run (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/src/interact.ts:143:38)"}

@@ -1,0 +1,28 @@
+{"level":30,"time":1770040817908,"msg":"========================================"}
+{"level":30,"time":1770040817910,"msg":"FaucetAMM CLI"}
+{"level":30,"time":1770040817911,"msg":"========================================"}
+{"level":30,"time":1770040817911,"msg":"Step 1: Initializing wallet..."}
+{"level":30,"time":1770040817911,"msg":"Building wallet from mnemonic..."}
+{"level":30,"time":1770040818026,"msg":"Your wallet address: mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm"}
+{"level":30,"time":1770040818026,"msg":"Waiting for wallet to sync..."}
+{"level":30,"time":1770040818034,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1770040823272,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1770040851599,"msg":"Waiting for wallet sync. Synced: true"}
+{"level":30,"time":1770040851605,"msg":"DEBUG: Wallet synced, checking balances..."}
+{"level":30,"time":1770040851621,"msg":"Unshielded balance: 1000000000 tSTAR"}
+{"level":30,"time":1770040851621,"msg":"Shielded balance: 0 tSTAR"}
+{"level":30,"time":1770040851621,"msg":"Total balance: 1000000000 tSTAR"}
+{"level":30,"time":1770040851623,"msg":"DEBUG: Total balance: 1000000000"}
+{"level":30,"time":1770040851623,"msg":"DEBUG: Starting dust registration..."}
+{"level":30,"time":1770040851629,"section":"DUST Registration Debug","availableCoinsCount":1,"dustBalance":1996245350999999995,"coinsMeta":[{"registeredForDustGeneration":true,"hasMetaField":true}]}
+{"level":30,"time":1770040851630,"msg":"All Night UTXOs are already registered for dust generation"}
+{"level":30,"time":1770040851631,"msg":"Current dust balance: 1996245350999999995"}
+{"level":30,"time":1770040851632,"msg":"DEBUG: Dust registration complete."}
+{"level":30,"time":1770040851633,"msg":"Step 2: Configuring providers..."}
+{"level":30,"time":1770040851637,"section":"DUST Wallet State","dust":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{}},"protocolVersion":0,"state":{"networkId":"preview","pendingDustTokens":[],"progress":{"appliedIndex":607,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":607,"isConnected":true},"protocolVersion":0,"publicKey":{"publicKey":15910875447565964891213978322799052612442083852947537543067608621265097140841},"state":{"__wbg_ptr":8573344}}}}
+{"level":30,"time":1770040851638,"section":"Shielded Wallet State","shielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"coinHashes":{},"networkId":"preview","progress":{"appliedIndex":482,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":482,"isConnected":true},"protocolVersion":0,"publicKeys":{"coinPublicKey":"e1aa86317907c717908b15a9b480774a2ede12a95217dc8bff486be9664e2717","encryptionPublicKey":"b4732bf85983ed47631e2bd2ee918918ba3a3f2a67fdf17412d41280d065f3c8"},"state":{"__wbg_ptr":5020808},"txHistoryArray":[]}}}
+{"level":30,"time":1770040851638,"section":"Unshielded Wallet State","unshielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"networkId":"preview","progress":{"appliedId":246,"highestTransactionId":246,"isConnected":true},"protocolVersion":0,"publicKey":{"address":"mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm","addressHex":"f6dbd732b049eb493aa3fe43f2c77103ef0f66c19af067a26280ec3fa866aeb3","publicKey":"9f53d5c876fa6229cba7361c35d709c7d1c0334c0c29ae4f199750c9a3244e92"},"state":{"availableUtxos":{"_id":"HashMap","values":["[Array]"]},"pendingUtxos":{"_id":"HashMap","values":[]}}}}}
+{"level":30,"time":1770040851643,"msg":"Step 3: Finding contract at 74e82d9482903f844a515b35cc7f3e22d2507b1ccd79e78ac99cb7db60f33a66..."}
+{"level":50,"time":1770040855004,"msg":"Command failed:"}
+{"level":50,"time":1770040855004,"msg":"Following operations: mintTestTokensX, mintTestTokensY, are undefined or have mismatched verifier keys for contract state ContractState (Array(5) [\n    <[0a]: b2>,\n    <[-]: b16>,\n    <[-]: b16>,\n    <[-]: b16>,\n    <[-]: b16>,\n]{\n    mintTestTokensY: <verifier key>,\n    mintTestTokensX: <verifier key>,\n}ContractState )"}
+{"level":50,"time":1770040855009,"msg":"TypeError: Following operations: mintTestTokensX, mintTestTokensY, are undefined or have mismatched verifier keys for contract state ContractState (Array(5) [\n    <[0a]: b2>,\n    <[-]: b16>,\n    <[-]: b16>,\n    <[-]: b16>,\n    <[-]: b16>,\n]{\n    mintTestTokensY: <verifier key>,\n    mintTestTokensX: <verifier key>,\n}ContractState )\n    at verifyContractState (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/midnight-js-contracts/src/find-deployed-contract.ts:130:11)\n    at findDeployedContract (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/midnight-js-contracts/src/find-deployed-contract.ts:270:3)\n    at async Module.joinContract (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/src/api.ts:110:22)\n    at async run (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/src/interact.ts:92:26)"}

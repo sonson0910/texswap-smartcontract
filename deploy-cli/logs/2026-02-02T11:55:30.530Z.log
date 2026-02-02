@@ -1,0 +1,32 @@
+{"level":30,"time":1770033330544,"msg":"========================================"}
+{"level":30,"time":1770033330545,"msg":"FaucetAMM CLI"}
+{"level":30,"time":1770033330546,"msg":"========================================"}
+{"level":30,"time":1770033330546,"msg":"Step 1: Initializing wallet..."}
+{"level":30,"time":1770033330546,"msg":"Building wallet from mnemonic..."}
+{"level":30,"time":1770033330654,"msg":"Your wallet address: mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm"}
+{"level":30,"time":1770033330654,"msg":"Waiting for wallet to sync..."}
+{"level":30,"time":1770033330662,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1770033362780,"msg":"Waiting for wallet sync. Synced: true"}
+{"level":30,"time":1770033362783,"msg":"DEBUG: Wallet synced, checking balances..."}
+{"level":30,"time":1770033362795,"msg":"Unshielded balance: 1000000000 tSTAR"}
+{"level":30,"time":1770033362795,"msg":"Shielded balance: 0 tSTAR"}
+{"level":30,"time":1770033362795,"msg":"Total balance: 1000000000 tSTAR"}
+{"level":30,"time":1770033362797,"msg":"DEBUG: Total balance: 1000000000"}
+{"level":30,"time":1770033362797,"msg":"DEBUG: Starting dust registration..."}
+{"level":30,"time":1770033362803,"section":"DUST Registration Debug","availableCoinsCount":1,"dustBalance":1935533787999999999,"coinsMeta":[{"registeredForDustGeneration":true,"hasMetaField":true}]}
+{"level":30,"time":1770033362804,"msg":"All Night UTXOs are already registered for dust generation"}
+{"level":30,"time":1770033362804,"msg":"Current dust balance: 1935533787999999999"}
+{"level":30,"time":1770033362806,"msg":"DEBUG: Dust registration complete."}
+{"level":30,"time":1770033362807,"msg":"Step 2: Configuring providers..."}
+{"level":30,"time":1770033362811,"section":"DUST Wallet State","dust":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{}},"protocolVersion":0,"state":{"networkId":"preview","pendingDustTokens":[],"progress":{"appliedIndex":600,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":600,"isConnected":true},"protocolVersion":0,"publicKey":{"publicKey":15910875447565964891213978322799052612442083852947537543067608621265097140841},"state":{"__wbg_ptr":8431552}}}}
+{"level":30,"time":1770033362811,"section":"Shielded Wallet State","shielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"coinHashes":{},"networkId":"preview","progress":{"appliedIndex":482,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":482,"isConnected":true},"protocolVersion":0,"publicKeys":{"coinPublicKey":"e1aa86317907c717908b15a9b480774a2ede12a95217dc8bff486be9664e2717","encryptionPublicKey":"b4732bf85983ed47631e2bd2ee918918ba3a3f2a67fdf17412d41280d065f3c8"},"state":{"__wbg_ptr":4900888},"txHistoryArray":[]}}}
+{"level":30,"time":1770033362811,"section":"Unshielded Wallet State","unshielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"networkId":"preview","progress":{"appliedId":246,"highestTransactionId":246,"isConnected":true},"protocolVersion":0,"publicKey":{"address":"mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm","addressHex":"f6dbd732b049eb493aa3fe43f2c77103ef0f66c19af067a26280ec3fa866aeb3","publicKey":"9f53d5c876fa6229cba7361c35d709c7d1c0334c0c29ae4f199750c9a3244e92"},"state":{"availableUtxos":{"_id":"HashMap","values":["[Array]"]},"pendingUtxos":{"_id":"HashMap","values":[]}}}}}
+{"level":30,"time":1770033362816,"msg":"Step 3: Finding contract at a7e34c5770ad29a7eec69e93f209eb932a6161aaab36e64c6241abb203c765db..."}
+{"level":30,"time":1770033364631,"msg":"Joined contract at address: a7e34c5770ad29a7eec69e93f209eb932a6161aaab36e64c6241abb203c765db"}
+{"level":30,"time":1770033364631,"msg":"Contract found! Executing command..."}
+{"level":30,"time":1770033364631,"msg":"Checking contract ledger state..."}
+{"level":30,"time":1770033364889,"section":"Ledger State","feeBps":"10","xLiquidity":"0","yLiquidity":"0","lpCirculatingSupply":"0"}
+{"level":30,"time":1770033364889,"msg":"Current state - feeBps: 10, xLiquidity: 0, yLiquidity: 0"}
+{"level":30,"time":1770033364889,"msg":"========================================"}
+{"level":30,"time":1770033364889,"msg":"Command completed successfully!"}
+{"level":30,"time":1770033364889,"msg":"========================================"}

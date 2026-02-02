@@ -1,0 +1,47 @@
+{"level":30,"time":1770044262601,"msg":"========================================"}
+{"level":30,"time":1770044262603,"msg":"FaucetAMM CLI"}
+{"level":30,"time":1770044262603,"msg":"========================================"}
+{"level":30,"time":1770044262603,"msg":"Step 1: Initializing wallet..."}
+{"level":30,"time":1770044262603,"msg":"Building wallet from mnemonic..."}
+{"level":30,"time":1770044262718,"msg":"Your wallet address: mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm"}
+{"level":30,"time":1770044262718,"msg":"Waiting for wallet to sync..."}
+{"level":30,"time":1770044262726,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1770044267791,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1770044295365,"msg":"Waiting for wallet sync. Synced: true"}
+{"level":30,"time":1770044295373,"msg":"DEBUG: Wallet synced, checking balances..."}
+{"level":30,"time":1770044295387,"msg":"Unshielded balance: 1000000000 tSTAR"}
+{"level":30,"time":1770044295387,"msg":"Shielded balance: 0 tSTAR"}
+{"level":30,"time":1770044295387,"msg":"Total balance: 1000000000 tSTAR"}
+{"level":30,"time":1770044295389,"msg":"DEBUG: Total balance: 1000000000"}
+{"level":30,"time":1770044295389,"msg":"DEBUG: Starting dust registration..."}
+{"level":30,"time":1770044295395,"section":"DUST Registration Debug","availableCoinsCount":1,"dustBalance":2024116898999999993,"coinsMeta":[{"registeredForDustGeneration":true,"hasMetaField":true}]}
+{"level":30,"time":1770044295395,"msg":"All Night UTXOs are already registered for dust generation"}
+{"level":30,"time":1770044295396,"msg":"Current dust balance: 2024116898999999993"}
+{"level":30,"time":1770044295397,"msg":"DEBUG: Dust registration complete."}
+{"level":30,"time":1770044295398,"msg":"Step 2: Configuring providers..."}
+{"level":30,"time":1770044295401,"section":"DUST Wallet State","dust":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{}},"protocolVersion":0,"state":{"networkId":"preview","pendingDustTokens":[],"progress":{"appliedIndex":609,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":609,"isConnected":true},"protocolVersion":0,"publicKey":{"publicKey":15910875447565964891213978322799052612442083852947537543067608621265097140841},"state":{"__wbg_ptr":9082224}}}}
+{"level":30,"time":1770044295402,"section":"Shielded Wallet State","shielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"coinHashes":{},"networkId":"preview","progress":{"appliedIndex":482,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":482,"isConnected":true},"protocolVersion":0,"publicKeys":{"coinPublicKey":"e1aa86317907c717908b15a9b480774a2ede12a95217dc8bff486be9664e2717","encryptionPublicKey":"b4732bf85983ed47631e2bd2ee918918ba3a3f2a67fdf17412d41280d065f3c8"},"state":{"__wbg_ptr":5635512},"txHistoryArray":[]}}}
+{"level":30,"time":1770044295403,"section":"Unshielded Wallet State","unshielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"networkId":"preview","progress":{"appliedId":246,"highestTransactionId":246,"isConnected":true},"protocolVersion":0,"publicKey":{"address":"mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm","addressHex":"f6dbd732b049eb493aa3fe43f2c77103ef0f66c19af067a26280ec3fa866aeb3","publicKey":"9f53d5c876fa6229cba7361c35d709c7d1c0334c0c29ae4f199750c9a3244e92"},"state":{"availableUtxos":{"_id":"HashMap","values":["[Array]"]},"pendingUtxos":{"_id":"HashMap","values":[]}}}}}
+{"level":30,"time":1770044295407,"msg":"Step 3: Finding contract at db94208dc14fe98f40439286744357583bfb46ff3d0a411df40c2a2d8142a953..."}
+{"level":30,"time":1770044298730,"msg":"Joined contract at address: db94208dc14fe98f40439286744357583bfb46ff3d0a411df40c2a2d8142a953"}
+{"level":30,"time":1770044298730,"msg":"Contract found! Executing command..."}
+{"level":30,"time":1770044298730,"msg":"Minting 1000000 Unshielded Test Token X..."}
+{"level":30,"time":1770044298730,"msg":"Wallet addressHex: f6dbd732b049eb493aa3fe43f2c77103ef0f66c19af067a26280ec3fa866aeb3"}
+{"level":30,"time":1770044298730,"msg":"Debug - Arguments:"}
+{"level":30,"time":1770044298730,"msg":"  amount: 1000000 (type: bigint)"}
+{"level":30,"time":1770044298730,"msg":"  recipient.is_left: false"}
+{"level":30,"time":1770044298730,"msg":"  recipient.right.bytes: f6dbd732b049eb493aa3fe43f2c77103ef0f66c19af067a26280ec3fa866aeb3"}
+{"level":30,"time":1770044298730,"msg":"Contract object keys: deployTxData, callTx, circuitMaintenanceTx, contractMaintenanceTx"}
+{"level":30,"time":1770044298730,"msg":"Contract.callTx available: true"}
+{"level":30,"time":1770044298730,"msg":"Contract.callTx keys: mintTestTokensX, mintTestTokensY"}
+{"level":30,"time":1770044298730,"msg":"Now calling contract.callTx.mintTestTokensX (unshielded)..."}
+{"level":30,"time":1770044299954,"msg":"DEBUG balanceTx: Starting balanceUnboundTransaction..."}
+{"level":30,"time":1770044301909,"msg":"DEBUG balanceTx: Recipe type = UNBOUND_TRANSACTION, has balancingTx = true"}
+{"level":30,"time":1770044301909,"msg":"DEBUG balanceTx: Starting finalizeRecipe..."}
+{"level":30,"time":1770044302315,"msg":"DEBUG balanceTx: finalizeRecipe succeeded"}
+{"level":50,"time":1770044331703,"msg":"Transaction failed with error:"}
+{"level":50,"time":1770044331703,"msg":"  Message: Do not know how to serialize a BigInt"}
+{"level":50,"time":1770044331704,"msg":"  Stack: TypeError: Do not know how to serialize a BigInt\n    at JSON.stringify (<anonymous>)\n    at run (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/src/interact.ts:147:60)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+{"level":50,"time":1770044331704,"msg":"Command failed:"}
+{"level":50,"time":1770044331704,"msg":"Do not know how to serialize a BigInt"}
+{"level":50,"time":1770044331704,"msg":"TypeError: Do not know how to serialize a BigInt\n    at JSON.stringify (<anonymous>)\n    at run (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/src/interact.ts:147:60)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"}

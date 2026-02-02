@@ -1,0 +1,45 @@
+{"level":30,"time":1770036999543,"msg":"========================================"}
+{"level":30,"time":1770036999545,"msg":"FaucetAMM CLI"}
+{"level":30,"time":1770036999545,"msg":"========================================"}
+{"level":30,"time":1770036999545,"msg":"Step 1: Initializing wallet..."}
+{"level":30,"time":1770036999545,"msg":"Building wallet from mnemonic..."}
+{"level":30,"time":1770036999652,"msg":"Your wallet address: mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm"}
+{"level":30,"time":1770036999652,"msg":"Waiting for wallet to sync..."}
+{"level":30,"time":1770036999659,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1770037004711,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1770037034749,"msg":"Waiting for wallet sync. Synced: true"}
+{"level":30,"time":1770037034752,"msg":"DEBUG: Wallet synced, checking balances..."}
+{"level":30,"time":1770037034765,"msg":"Unshielded balance: 1000000000 tSTAR"}
+{"level":30,"time":1770037034765,"msg":"Shielded balance: 0 tSTAR"}
+{"level":30,"time":1770037034766,"msg":"Total balance: 1000000000 tSTAR"}
+{"level":30,"time":1770037034768,"msg":"DEBUG: Total balance: 1000000000"}
+{"level":30,"time":1770037034768,"msg":"DEBUG: Starting dust registration..."}
+{"level":30,"time":1770037034774,"section":"DUST Registration Debug","availableCoinsCount":1,"dustBalance":1965290211999999997,"coinsMeta":[{"registeredForDustGeneration":true,"hasMetaField":true}]}
+{"level":30,"time":1770037034775,"msg":"All Night UTXOs are already registered for dust generation"}
+{"level":30,"time":1770037034775,"msg":"Current dust balance: 1965290211999999997"}
+{"level":30,"time":1770037034777,"msg":"DEBUG: Dust registration complete."}
+{"level":30,"time":1770037034778,"msg":"Step 2: Configuring providers..."}
+{"level":30,"time":1770037034782,"section":"DUST Wallet State","dust":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{}},"protocolVersion":0,"state":{"networkId":"preview","pendingDustTokens":[],"progress":{"appliedIndex":602,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":602,"isConnected":true},"protocolVersion":0,"publicKey":{"publicKey":15910875447565964891213978322799052612442083852947537543067608621265097140841},"state":{"__wbg_ptr":8521856}}}}
+{"level":30,"time":1770037034783,"section":"Shielded Wallet State","shielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"coinHashes":{},"networkId":"preview","progress":{"appliedIndex":482,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":482,"isConnected":true},"protocolVersion":0,"publicKeys":{"coinPublicKey":"e1aa86317907c717908b15a9b480774a2ede12a95217dc8bff486be9664e2717","encryptionPublicKey":"b4732bf85983ed47631e2bd2ee918918ba3a3f2a67fdf17412d41280d065f3c8"},"state":{"__wbg_ptr":4947184},"txHistoryArray":[]}}}
+{"level":30,"time":1770037034783,"section":"Unshielded Wallet State","unshielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"networkId":"preview","progress":{"appliedId":246,"highestTransactionId":246,"isConnected":true},"protocolVersion":0,"publicKey":{"address":"mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm","addressHex":"f6dbd732b049eb493aa3fe43f2c77103ef0f66c19af067a26280ec3fa866aeb3","publicKey":"9f53d5c876fa6229cba7361c35d709c7d1c0334c0c29ae4f199750c9a3244e92"},"state":{"availableUtxos":{"_id":"HashMap","values":["[Array]"]},"pendingUtxos":{"_id":"HashMap","values":[]}}}}}
+{"level":30,"time":1770037034787,"msg":"Step 3: Finding contract at b841c55493e04bfcce37d8379dd02da1984c0edde5f534802c70c3211340baa4..."}
+{"level":30,"time":1770037038469,"msg":"Joined contract at address: b841c55493e04bfcce37d8379dd02da1984c0edde5f534802c70c3211340baa4"}
+{"level":30,"time":1770037038470,"msg":"Contract found! Executing command..."}
+{"level":30,"time":1770037038470,"msg":"Minting 1000000 Test Token X..."}
+{"level":30,"time":1770037038470,"msg":"Debug - Arguments:"}
+{"level":30,"time":1770037038470,"msg":"  amount: 1000000 (type: bigint)"}
+{"level":30,"time":1770037038470,"msg":"  recipient.is_left: true"}
+{"level":30,"time":1770037038470,"msg":"  recipient.left.bytes: e1aa86317907c717908b15a9b480774a2ede12a95217dc8bff486be9664e2717"}
+{"level":30,"time":1770037038470,"msg":"  nonce: c4ddb7d57c1bccb0fbaaa83230ee4e816bc2c4075f1687797b7e7344b2cc8cf8"}
+{"level":30,"time":1770037038470,"msg":"  nonce length: 32"}
+{"level":30,"time":1770037038470,"msg":"Contract object keys: deployTxData, callTx, circuitMaintenanceTx, contractMaintenanceTx"}
+{"level":30,"time":1770037038470,"msg":"Contract.callTx available: true"}
+{"level":30,"time":1770037038470,"msg":"Contract.callTx keys: mintTestTokensX, mintTestTokensY, initLiquidity, addLiquidity, removeLiquidity, swapXToY, swapYToX"}
+{"level":30,"time":1770037038470,"msg":"Now calling contract.callTx.mintTestTokensX..."}
+{"level":50,"time":1770037038955,"msg":"Transaction failed with error:"}
+{"level":50,"time":1770037038955,"msg":"  Message: Unexpected error executing scoped transaction '<unnamed>': Error: No private state found at private state ID 'faucet_amm_private_state'"}
+{"level":50,"time":1770037038955,"msg":"  Cause: {}"}
+{"level":50,"time":1770037038958,"msg":"  Stack: Error: Unexpected error executing scoped transaction '<unnamed>': Error: No private state found at private state ID 'faucet_amm_private_state'\n    at scoped (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/midnight-js-contracts/src/internal/transaction.ts:183:21)\n    at async run (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/src/interact.ts:144:38)"}
+{"level":50,"time":1770037038959,"msg":"Command failed:"}
+{"level":50,"time":1770037038959,"msg":"Unexpected error executing scoped transaction '<unnamed>': Error: No private state found at private state ID 'faucet_amm_private_state'"}
+{"level":50,"time":1770037038959,"msg":"Error: Unexpected error executing scoped transaction '<unnamed>': Error: No private state found at private state ID 'faucet_amm_private_state'\n    at scoped (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/midnight-js-contracts/src/internal/transaction.ts:183:21)\n    at async run (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/src/interact.ts:144:38)"}

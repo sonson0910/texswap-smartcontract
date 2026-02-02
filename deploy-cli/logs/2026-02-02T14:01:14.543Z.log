@@ -1,0 +1,44 @@
+{"level":30,"time":1770040874555,"msg":"========================================"}
+{"level":30,"time":1770040874557,"msg":"FaucetAMM Contract Deployment on PREVIEW NETWORK"}
+{"level":30,"time":1770040874557,"msg":"========================================"}
+{"level":30,"time":1770040874557,"msg":"Step 1: Initializing wallet from mnemonic..."}
+{"level":30,"time":1770040874557,"msg":"Building wallet from mnemonic..."}
+{"level":30,"time":1770040874666,"msg":"Your wallet address: mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm"}
+{"level":30,"time":1770040874666,"msg":"Waiting for wallet to sync..."}
+{"level":30,"time":1770040874675,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1770040879719,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1770040907909,"msg":"Waiting for wallet sync. Synced: true"}
+{"level":30,"time":1770040907921,"msg":"DEBUG: Wallet synced, checking balances..."}
+{"level":30,"time":1770040907935,"msg":"Unshielded balance: 1000000000 tSTAR"}
+{"level":30,"time":1770040907935,"msg":"Shielded balance: 0 tSTAR"}
+{"level":30,"time":1770040907935,"msg":"Total balance: 1000000000 tSTAR"}
+{"level":30,"time":1770040907937,"msg":"DEBUG: Total balance: 1000000000"}
+{"level":30,"time":1770040907937,"msg":"DEBUG: Starting dust registration..."}
+{"level":30,"time":1770040907944,"section":"DUST Registration Debug","availableCoinsCount":1,"dustBalance":1996708302999999995,"coinsMeta":[{"registeredForDustGeneration":true,"hasMetaField":true}]}
+{"level":30,"time":1770040907944,"msg":"All Night UTXOs are already registered for dust generation"}
+{"level":30,"time":1770040907945,"msg":"Current dust balance: 1996708302999999995"}
+{"level":30,"time":1770040907947,"msg":"DEBUG: Dust registration complete."}
+{"level":30,"time":1770040907948,"msg":"Step 2: Configuring providers..."}
+{"level":30,"time":1770040907952,"section":"DUST Wallet State","dust":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{}},"protocolVersion":0,"state":{"networkId":"preview","pendingDustTokens":[],"progress":{"appliedIndex":607,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":607,"isConnected":true},"protocolVersion":0,"publicKey":{"publicKey":15910875447565964891213978322799052612442083852947537543067608621265097140841},"state":{"__wbg_ptr":8542528}}}}
+{"level":30,"time":1770040907953,"section":"Shielded Wallet State","shielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"coinHashes":{},"networkId":"preview","progress":{"appliedIndex":482,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":482,"isConnected":true},"protocolVersion":0,"publicKeys":{"coinPublicKey":"e1aa86317907c717908b15a9b480774a2ede12a95217dc8bff486be9664e2717","encryptionPublicKey":"b4732bf85983ed47631e2bd2ee918918ba3a3f2a67fdf17412d41280d065f3c8"},"state":{"__wbg_ptr":5741320},"txHistoryArray":[]}}}
+{"level":30,"time":1770040907953,"section":"Unshielded Wallet State","unshielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"networkId":"preview","progress":{"appliedId":246,"highestTransactionId":246,"isConnected":true},"protocolVersion":0,"publicKey":{"address":"mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm","addressHex":"f6dbd732b049eb493aa3fe43f2c77103ef0f66c19af067a26280ec3fa866aeb3","publicKey":"9f53d5c876fa6229cba7361c35d709c7d1c0334c0c29ae4f199750c9a3244e92"},"state":{"availableUtxos":{"_id":"HashMap","values":["[Array]"]},"pendingUtxos":{"_id":"HashMap","values":[]}}}}}
+{"level":30,"time":1770040907958,"msg":"Step 3: Deploying FaucetAMM contract..."}
+{"level":30,"time":1770040907958,"msg":"Deploying FaucetAMMUnshielded contract with feeBps = 10..."}
+{"level":30,"time":1770040908009,"msg":"DEBUG balanceTx: Starting balanceUnboundTransaction..."}
+{"level":30,"time":1770040910498,"msg":"DEBUG balanceTx: Recipe type = UNBOUND_TRANSACTION, has balancingTx = true"}
+{"level":30,"time":1770040910499,"msg":"DEBUG balanceTx: Starting finalizeRecipe..."}
+{"level":30,"time":1770040910991,"msg":"DEBUG balanceTx: finalizeRecipe succeeded"}
+{"level":30,"time":1770040931214,"msg":"Deployed at: db94208dc14fe98f40439286744357583bfb46ff3d0a411df40c2a2d8142a953"}
+{"level":30,"time":1770040931215,"msg":"========================================"}
+{"level":30,"time":1770040931215,"msg":"DEPLOYMENT SUCCESSFUL!"}
+{"level":30,"time":1770040931215,"msg":"Contract Address: db94208dc14fe98f40439286744357583bfb46ff3d0a411df40c2a2d8142a953"}
+{"level":30,"time":1770040931215,"msg":"========================================"}
+{"level":30,"time":1770040931215,"msg":"Step 4: Verifying contract state..."}
+{"level":30,"time":1770040931215,"msg":"Checking contract ledger state..."}
+{"level":30,"time":1770040931660,"section":"Ledger State","feeBps":"10","xLiquidity":"0","yLiquidity":"0","lpCirculatingSupply":"0"}
+{"level":30,"time":1770040931661,"msg":"Current state - feeBps: 10, xLiquidity: 0, yLiquidity: 0"}
+{"level":30,"time":1770040931661,"msg":""}
+{"level":30,"time":1770040931661,"msg":"Next steps:"}
+{"level":30,"time":1770040931661,"msg":"1. Use mintTestTokensX/Y to mint test tokens"}
+{"level":30,"time":1770040931661,"msg":"2. Use initLiquidity to initialize the pool"}
+{"level":30,"time":1770040931661,"msg":"3. Use swapXToY/swapYToX to test swaps"}

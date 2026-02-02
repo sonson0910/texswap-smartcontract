@@ -1,0 +1,8 @@
+{"level":30,"time":1769795793398,"msg":"========================================"}
+{"level":30,"time":1769795793400,"msg":"FaucetAMM Contract Deployment on PREVIEW NETWORK"}
+{"level":30,"time":1769795793400,"msg":"========================================"}
+{"level":30,"time":1769795793400,"msg":"Step 1: Initializing wallet from mnemonic..."}
+{"level":30,"time":1769795793400,"msg":"Building wallet from mnemonic..."}
+{"level":30,"time":1769795793512,"msg":"Your wallet address: mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm"}
+{"level":30,"time":1769795793512,"msg":"Waiting for wallet to sync..."}
+{"level":30,"time":1769795793519,"msg":"Waiting for wallet sync. Synced: false"}

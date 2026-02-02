@@ -1,0 +1,30 @@
+{"level":30,"time":1769796448154,"msg":"========================================"}
+{"level":30,"time":1769796448156,"msg":"FaucetAMM Contract Deployment on PREVIEW NETWORK"}
+{"level":30,"time":1769796448156,"msg":"========================================"}
+{"level":30,"time":1769796448156,"msg":"Step 1: Initializing wallet from mnemonic..."}
+{"level":30,"time":1769796448156,"msg":"Building wallet from mnemonic..."}
+{"level":30,"time":1769796448269,"msg":"Your wallet address: mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm"}
+{"level":30,"time":1769796448270,"msg":"Waiting for wallet to sync..."}
+{"level":30,"time":1769796448277,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796479772,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796509776,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796539775,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796569778,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796599775,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796629776,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796659775,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796689779,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796719775,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796749778,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796779777,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796809776,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796839774,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796869769,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796899767,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796929763,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796959761,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769796989757,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769797019755,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769797049753,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769797079753,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1769797109749,"msg":"Waiting for wallet sync. Synced: false"}

@@ -1,0 +1,268 @@
+pragma language_version >= 0.14.0;
+
+// FaucetAMM with Unshielded Tokens - workaround for shielded token callTx bug
+// Uses mintUnshieldedToken/receiveUnshielded instead of shielded versions
+
+import CompactStandardLibrary;
+
+// Swap fee in basis points (e.g. 10 = 0.1%)
+export ledger feeBps: Uint<16>;
+
+// Rewards for LPs (accumulated from fees)
+export ledger xRewards: Uint<128>;
+
+// Pool state
+export ledger xLiquidity: Uint<128>;
+export ledger yLiquidity: Uint<128>;
+export ledger lpCirculatingSupply: Uint<128>;
+
+constructor(f: Uint<16>) {
+    // Fee must be less than 100% (10000 basis points)
+    assert(f < 10000, "Fee too high");
+
+    feeBps = disclose(f);
+    xRewards = 0;
+    xLiquidity = 0;
+    yLiquidity = 0;
+    lpCirculatingSupply = 0;
+}
+
+// Token color getters using domain hash with kernel.self()
+circuit getXTokenColor(): Bytes<32> {
+    return tokenType(getXTokenName(), kernel.self());
+}
+
+circuit getYTokenColor(): Bytes<32> {
+    return tokenType(getYTokenName(), kernel.self());
+}
+
+circuit getLPTokenColor(): Bytes<32> {
+    return tokenType(getLPTokenName(), kernel.self());
+}
+
+circuit getXTokenName(): Bytes<32> {
+    return pad(32, "X_TOKEN");
+}
+
+circuit getYTokenName(): Bytes<32> {
+    return pad(32, "Y_TOKEN");
+}
+
+circuit getLPTokenName(): Bytes<32> {
+    return pad(32, "LP_TOKEN");
+}
+
+// Helper for k calculation
+circuit calcK(x: Uint<128>, y: Uint<128>): Uint<248> {
+    return ((x as Uint<124>) * (y as Uint<124>)) as Uint<248>;
+}
+
+// ============================================
+// MINT FUNCTIONS (for testing)
+// ============================================
+
+// Mint test tokens using UNSHIELDED tokens
+export circuit mintTestTokensX(
+    xOut: Uint<64>,
+    recipient: Either<ContractAddress, UserAddress>
+): [] {
+    mintUnshieldedToken(
+        getXTokenName(),
+        disclose(xOut),
+        disclose(recipient)
+    );
+}
+
+export circuit mintTestTokensY(
+    yOut: Uint<64>,
+    recipient: Either<ContractAddress, UserAddress>
+): [] {
+    mintUnshieldedToken(
+        getYTokenName(),
+        disclose(yOut),
+        disclose(recipient)
+    );
+}
+
+// ============================================
+// LIQUIDITY FUNCTIONS
+// ============================================
+
+// Initialize liquidity pool - SIMPLIFIED VERSION
+// Only updates ledger state and mints LP tokens
+// No assertions to reduce circuit complexity
+export circuit initLiquidity(
+    xIn: Uint<64>,
+    yIn: Uint<64>,
+    lpOut: Uint<64>,
+    recipient: Either<ContractAddress, UserAddress>
+): [] {
+    // Simple initialization - just set values and mint LP tokens
+    // Update ledger state
+    xLiquidity = disclose(xIn);
+    yLiquidity = disclose(yIn);
+    lpCirculatingSupply = disclose(lpOut);
+    
+    // mint and send lp tokens to recipient (unshielded)
+    mintUnshieldedToken(
+        getLPTokenName(),
+        disclose(lpOut),
+        disclose(recipient)
+    );
+}
+
+// Add liquidity to existing pool
+export circuit addLiquidity(
+    xIn: Uint<64>,
+    yIn: Uint<64>,
+    lpOut: Uint<64>,
+    recipient: Either<ContractAddress, UserAddress>
+): [] {
+    assert(lpCirculatingSupply > 0, "Not yet initialized");
+
+    const xLiquidityAdded = disclose(xIn);
+    const yLiquidityAdded = disclose(yIn);
+
+    if (xLiquidityAdded * yLiquidity < yLiquidityAdded * xLiquidity) {
+        const xLhs = lpOut * xLiquidity;
+        const xRhs = xLiquidityAdded * lpCirculatingSupply;
+        assert(xLhs <= xRhs, "Too many LP tokens taken (bound by xIn)");
+    } else {
+        const yLhs = lpOut * yLiquidity;
+        const yRhs = yLiquidityAdded * lpCirculatingSupply;
+        assert(yLhs <= yRhs, "Too many LP tokens taken (bound by yIn)");
+    }
+
+    // send lp tokens to recipient (unshielded)
+    lpCirculatingSupply = lpCirculatingSupply + disclose(lpOut) as Uint<128>;
+    mintUnshieldedToken(
+        getLPTokenName(),
+        disclose(lpOut),
+        disclose(recipient)
+    );
+
+    // Mint X tokens directly to contract
+    const contractAddr = left<ContractAddress, UserAddress>(kernel.self());
+    xLiquidity = xLiquidity + xLiquidityAdded as Uint<128>;
+    mintUnshieldedToken(
+        getXTokenName(),
+        disclose(xIn),
+        contractAddr
+    );
+
+    // Mint Y tokens directly to contract
+    yLiquidity = yLiquidity + yLiquidityAdded as Uint<128>;
+    mintUnshieldedToken(
+        getYTokenName(),
+        disclose(yIn),
+        contractAddr
+    );
+}
+
+// Remove liquidity from pool
+// For demo: just update state and mint output tokens (burn LP by decrementing supply)
+export circuit removeLiquidity(
+    lpIn: Uint<64>,
+    xOut: Uint<64>,
+    yOut: Uint<64>,
+    recipient: Either<ContractAddress, UserAddress>
+): [] {
+    const xLhs = xOut * lpCirculatingSupply;
+    const xRhs = lpIn * xLiquidity;
+    assert(xLhs <= xRhs, "Too many X tokens taken");
+    
+    const yLhs = yOut * lpCirculatingSupply;
+    const yRhs = lpIn * yLiquidity;
+    assert(yLhs <= yRhs, "Too many Y tokens taken");
+
+    // Burn LP tokens (just decrement supply - demo mode)
+    lpCirculatingSupply = lpCirculatingSupply - disclose(lpIn);
+
+    // send x tokens to recipient
+    xLiquidity = xLiquidity - disclose(xOut);
+    mintUnshieldedToken(
+        getXTokenName(),
+        disclose(xOut),
+        disclose(recipient)
+    );
+
+    // send y tokens to recipient
+    yLiquidity = yLiquidity - disclose(yOut);
+    mintUnshieldedToken(
+        getYTokenName(),
+        disclose(yOut),
+        disclose(recipient)
+    );
+}
+
+// ============================================
+// SWAP FUNCTIONS
+// ============================================
+
+// Swap X tokens for Y tokens
+// Demo mode: mint X tokens to contract, mint Y tokens to recipient
+export circuit swapXToY(
+    xIn: Uint<64>,
+    xFee: Uint<64>,
+    yOut: Uint<64>,
+    recipient: Either<ContractAddress, UserAddress>
+): [] {
+    assert(xFee * 10000 >= xIn * feeBps, "Fee too low");
+
+    const initialK = calcK(xLiquidity, yLiquidity);
+
+    // Mint X tokens to contract (simulating receive)
+    const contractAddr = left<ContractAddress, UserAddress>(kernel.self());
+    xRewards = xRewards + disclose(xFee) as Uint<128>;
+    xLiquidity = xLiquidity + disclose(xIn - xFee) as Uint<128>;
+    mintUnshieldedToken(
+        getXTokenName(),
+        disclose(xIn),
+        contractAddr
+    );
+
+    // send y tokens to recipient
+    yLiquidity = yLiquidity - disclose(yOut);
+    mintUnshieldedToken(
+        getYTokenName(),
+        disclose(yOut),
+        disclose(recipient)
+    );
+
+    const finalK = calcK(xLiquidity, yLiquidity);
+    assert(finalK >= initialK, "Final k smaller than initial k");
+}
+
+// Swap Y tokens for X tokens
+// Demo mode: mint Y tokens to contract, mint X tokens to recipient
+export circuit swapYToX(
+    yIn: Uint<64>,
+    xFee: Uint<64>,
+    xOut: Uint<64>,
+    recipient: Either<ContractAddress, UserAddress>
+): [] {
+    assert(xFee * (10000 - feeBps) >= xOut * feeBps, "Fee too low");
+
+    const initialK = calcK(xLiquidity, yLiquidity);
+
+    // send x tokens to recipient
+    xRewards = xRewards + disclose(xFee) as Uint<128>;
+    xLiquidity = xLiquidity - disclose(xOut + xFee);
+    mintUnshieldedToken(
+        getXTokenName(),
+        disclose(xOut),
+        disclose(recipient)
+    );
+
+    // Mint Y tokens to contract (simulating receive)
+    const contractAddr = left<ContractAddress, UserAddress>(kernel.self());
+    yLiquidity = yLiquidity + disclose(yIn) as Uint<128>;
+    mintUnshieldedToken(
+        getYTokenName(),
+        disclose(yIn),
+        contractAddr
+    );
+
+    const finalK = calcK(xLiquidity, yLiquidity);
+    assert(finalK >= initialK, "Final k smaller than initial k");
+}

@@ -1,0 +1,44 @@
+{"level":30,"time":1770035913677,"msg":"========================================"}
+{"level":30,"time":1770035913679,"msg":"FaucetAMM CLI"}
+{"level":30,"time":1770035913679,"msg":"========================================"}
+{"level":30,"time":1770035913679,"msg":"Step 1: Initializing wallet..."}
+{"level":30,"time":1770035913680,"msg":"Building wallet from mnemonic..."}
+{"level":30,"time":1770035913789,"msg":"Your wallet address: mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm"}
+{"level":30,"time":1770035913789,"msg":"Waiting for wallet to sync..."}
+{"level":30,"time":1770035913796,"msg":"Waiting for wallet sync. Synced: false"}
+{"level":30,"time":1770035946544,"msg":"Waiting for wallet sync. Synced: true"}
+{"level":30,"time":1770035946549,"msg":"DEBUG: Wallet synced, checking balances..."}
+{"level":30,"time":1770035946559,"msg":"Unshielded balance: 1000000000 tSTAR"}
+{"level":30,"time":1770035946559,"msg":"Shielded balance: 0 tSTAR"}
+{"level":30,"time":1770035946559,"msg":"Total balance: 1000000000 tSTAR"}
+{"level":30,"time":1770035946561,"msg":"DEBUG: Total balance: 1000000000"}
+{"level":30,"time":1770035946561,"msg":"DEBUG: Starting dust registration..."}
+{"level":30,"time":1770035946567,"section":"DUST Registration Debug","availableCoinsCount":1,"dustBalance":1956595715999999998,"coinsMeta":[{"registeredForDustGeneration":true,"hasMetaField":true}]}
+{"level":30,"time":1770035946568,"msg":"All Night UTXOs are already registered for dust generation"}
+{"level":30,"time":1770035946568,"msg":"Current dust balance: 1956595715999999998"}
+{"level":30,"time":1770035946570,"msg":"DEBUG: Dust registration complete."}
+{"level":30,"time":1770035946571,"msg":"Step 2: Configuring providers..."}
+{"level":30,"time":1770035946575,"section":"DUST Wallet State","dust":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{}},"protocolVersion":0,"state":{"networkId":"preview","pendingDustTokens":[],"progress":{"appliedIndex":601,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":601,"isConnected":true},"protocolVersion":0,"publicKey":{"publicKey":15910875447565964891213978322799052612442083852947537543067608621265097140841},"state":{"__wbg_ptr":8461104}}}}
+{"level":30,"time":1770035946576,"section":"Shielded Wallet State","shielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"coinHashes":{},"networkId":"preview","progress":{"appliedIndex":482,"highestIndex":0,"highestRelevantIndex":0,"highestRelevantWalletIndex":482,"isConnected":true},"protocolVersion":0,"publicKeys":{"coinPublicKey":"e1aa86317907c717908b15a9b480774a2ede12a95217dc8bff486be9664e2717","encryptionPublicKey":"b4732bf85983ed47631e2bd2ee918918ba3a3f2a67fdf17412d41280d065f3c8"},"state":{"__wbg_ptr":5372616},"txHistoryArray":[]}}}
+{"level":30,"time":1770035946576,"section":"Unshielded Wallet State","unshielded":{"capabilities":{"coinsAndBalances":{},"keys":{},"serialization":{},"transactionHistory":{}},"protocolVersion":0,"state":{"networkId":"preview","progress":{"appliedId":246,"highestTransactionId":246,"isConnected":true},"protocolVersion":0,"publicKey":{"address":"mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm","addressHex":"f6dbd732b049eb493aa3fe43f2c77103ef0f66c19af067a26280ec3fa866aeb3","publicKey":"9f53d5c876fa6229cba7361c35d709c7d1c0334c0c29ae4f199750c9a3244e92"},"state":{"availableUtxos":{"_id":"HashMap","values":["[Array]"]},"pendingUtxos":{"_id":"HashMap","values":[]}}}}}
+{"level":30,"time":1770035946580,"msg":"Step 3: Finding contract at b551937fcd867ba7607f8ab93a27bc5e3f6513d86a9dd15c027f51bc9e002355..."}
+{"level":30,"time":1770035949604,"msg":"Joined contract at address: b551937fcd867ba7607f8ab93a27bc5e3f6513d86a9dd15c027f51bc9e002355"}
+{"level":30,"time":1770035949604,"msg":"Contract found! Executing command..."}
+{"level":30,"time":1770035949604,"msg":"Minting 1000000 Test Token X..."}
+{"level":30,"time":1770035949604,"msg":"Debug - Arguments:"}
+{"level":30,"time":1770035949604,"msg":"  amount: 1000000 (type: bigint)"}
+{"level":30,"time":1770035949604,"msg":"  recipient.is_left: true"}
+{"level":30,"time":1770035949604,"msg":"  recipient.left.bytes: e1aa86317907c717908b15a9b480774a2ede12a95217dc8bff486be9664e2717"}
+{"level":30,"time":1770035949604,"msg":"  nonce: 578495c445cc8bbf5e28957912051b42b627dc1a19cb1dfd8ce244e6cc443da0"}
+{"level":30,"time":1770035949604,"msg":"  nonce length: 32"}
+{"level":30,"time":1770035949604,"msg":"Contract object keys: deployTxData, callTx, circuitMaintenanceTx, contractMaintenanceTx"}
+{"level":30,"time":1770035949604,"msg":"Contract.callTx available: true"}
+{"level":30,"time":1770035949604,"msg":"Contract.callTx keys: mintTestTokensX, mintTestTokensY, initLiquidity, addLiquidity, removeLiquidity, swapXToY, swapYToX"}
+{"level":30,"time":1770035949604,"msg":"Now calling contract.callTx.mintTestTokensX..."}
+{"level":50,"time":1770035950024,"msg":"Transaction failed with error:"}
+{"level":50,"time":1770035950024,"msg":"  Message: Unexpected error executing scoped transaction '<unnamed>': RuntimeError: unreachable"}
+{"level":50,"time":1770035950024,"msg":"  Cause: {}"}
+{"level":50,"time":1770035950027,"msg":"  Stack: Error: Unexpected error executing scoped transaction '<unnamed>': RuntimeError: unreachable\n    at scoped (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/midnight-js-contracts/src/internal/transaction.ts:183:21)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async run (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/src/interact.ts:144:38)"}
+{"level":50,"time":1770035950027,"msg":"Command failed:"}
+{"level":50,"time":1770035950027,"msg":"Unexpected error executing scoped transaction '<unnamed>': RuntimeError: unreachable"}
+{"level":50,"time":1770035950027,"msg":"Error: Unexpected error executing scoped transaction '<unnamed>': RuntimeError: unreachable\n    at scoped (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/node_modules/@midnight-ntwrk/midnight-js-contracts/src/internal/transaction.ts:183:21)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async run (/media/son/Projects1/venera/midnight/tutorial/learn_build/exp2/midnight-dex-contract/deploy-cli/src/interact.ts:144:38)"}
