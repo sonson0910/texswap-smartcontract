@@ -9,7 +9,7 @@ import 'dotenv/config';
 import { randomBytes } from 'crypto';
 
 // Deployed contract address - update this after deployment
-const CONTRACT_ADDRESS = 'f866b1e49fa31c3b8ed621c8e691983056b245511797815a1b8c8f1f0580adcd';
+const CONTRACT_ADDRESS = '6d61449206c9791ee78a72fb96125e706bd30042f8356697c95bfcbc4e93883f';
 
 // Helper to convert hex string to Uint8Array for Bytes<32>
 function hexToBytes(hex: string): Uint8Array {

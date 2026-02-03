@@ -113,7 +113,7 @@ export circuit initLiquidity(
     const contractAddr = left<ContractAddress, UserAddress>(kernel.self());
     mintUnshieldedToken(
         getXTokenName(),
-        xLiquidity,
+        disclose(xIn) as Uint<64>,
         contractAddr
     );
 
@@ -121,7 +121,7 @@ export circuit initLiquidity(
     yLiquidity = disclose(yIn);
     mintUnshieldedToken(
         getYTokenName(),
-        yLiquidity,
+        disclose(yIn) as Uint<64>,
         contractAddr
     );
 }

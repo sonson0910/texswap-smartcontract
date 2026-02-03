@@ -9,10 +9,11 @@
     "./faucet-amm-v2": "./dist/faucet-amm-v2/contract/index.js"
   },
   "scripts": {
-    "build": "pnpm run build:faucet-amm-v2",
+    "build": "pnpm run build:faucet-amm-unshielded",
     "build:amm": "compactc ./src/AMM.compact ./dist/amm",
     "build:faucet-amm": "compactc ./src/FaucetAMM.compact ./dist/faucet-amm",
     "build:faucet-amm-v2": "compact compile ./src/FaucetAMMv2.compact ./dist/faucet-amm-v2",
+    "build:faucet-amm-unshielded": "compact compile ./src/FaucetAMMUnshielded.compact ./dist/faucet-amm-unshielded",
     "build:faucet": "compactc ./src/Faucet.compact ./dist/faucet",
     "test": "bun test"
   },

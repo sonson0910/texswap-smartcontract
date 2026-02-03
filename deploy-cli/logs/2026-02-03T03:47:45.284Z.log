@@ -1,0 +1,8 @@
+{"level":30,"time":1770090465298,"msg":"========================================"}
+{"level":30,"time":1770090465300,"msg":"FaucetAMM CLI"}
+{"level":30,"time":1770090465300,"msg":"========================================"}
+{"level":30,"time":1770090465300,"msg":"Step 1: Initializing wallet..."}
+{"level":30,"time":1770090465301,"msg":"Building wallet from mnemonic..."}
+{"level":30,"time":1770090465422,"msg":"Your wallet address: mn_addr_preview17mdawv4sf845jw4rlepl93m3q0hs7ekpntcx0gnzsrkrl2rx46eskt64lm"}
+{"level":30,"time":1770090465423,"msg":"Waiting for wallet to sync (timeout: 3 minutes)..."}
+{"level":30,"time":1770090465432,"msg":"Waiting for wallet sync. Synced: false"}
