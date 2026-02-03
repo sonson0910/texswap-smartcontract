@@ -1,0 +1,582 @@
+{
+  "circuits": [
+    {
+      "name": "mintTestTokensX",
+      "pure": false,
+      "arguments": [
+        {
+          "name": "xOut",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "recipient",
+          "type": {
+            "type-name": "Struct",
+            "name": "Either",
+            "elements": [
+              {
+                "name": "is_left",
+                "type": {
+                  "type-name": "Boolean"
+                }
+              },
+              {
+                "name": "left",
+                "type": {
+                  "type-name": "Struct",
+                  "name": "ZswapCoinPublicKey",
+                  "elements": [
+                    {
+                      "name": "bytes",
+                      "type": {
+                        "type-name": "Bytes",
+                        "length": 32
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "right",
+                "type": {
+                  "type-name": "Struct",
+                  "name": "ContractAddress",
+                  "elements": [
+                    {
+                      "name": "bytes",
+                      "type": {
+                        "type-name": "Bytes",
+                        "length": 32
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "nonce",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    },
+    {
+      "name": "mintTestTokensY",
+      "pure": false,
+      "arguments": [
+        {
+          "name": "yOut",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "recipient",
+          "type": {
+            "type-name": "Struct",
+            "name": "Either",
+            "elements": [
+              {
+                "name": "is_left",
+                "type": {
+                  "type-name": "Boolean"
+                }
+              },
+              {
+                "name": "left",
+                "type": {
+                  "type-name": "Struct",
+                  "name": "ZswapCoinPublicKey",
+                  "elements": [
+                    {
+                      "name": "bytes",
+                      "type": {
+                        "type-name": "Bytes",
+                        "length": 32
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "right",
+                "type": {
+                  "type-name": "Struct",
+                  "name": "ContractAddress",
+                  "elements": [
+                    {
+                      "name": "bytes",
+                      "type": {
+                        "type-name": "Bytes",
+                        "length": 32
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "nonce",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    },
+    {
+      "name": "initLiquidity",
+      "pure": false,
+      "arguments": [
+        {
+          "name": "xIn",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "yIn",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "lpOut",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "recipient",
+          "type": {
+            "type-name": "Struct",
+            "name": "Either",
+            "elements": [
+              {
+                "name": "is_left",
+                "type": {
+                  "type-name": "Boolean"
+                }
+              },
+              {
+                "name": "left",
+                "type": {
+                  "type-name": "Struct",
+                  "name": "ZswapCoinPublicKey",
+                  "elements": [
+                    {
+                      "name": "bytes",
+                      "type": {
+                        "type-name": "Bytes",
+                        "length": 32
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "right",
+                "type": {
+                  "type-name": "Struct",
+                  "name": "ContractAddress",
+                  "elements": [
+                    {
+                      "name": "bytes",
+                      "type": {
+                        "type-name": "Bytes",
+                        "length": 32
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "nonce",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    },
+    {
+      "name": "addLiquidity",
+      "pure": false,
+      "arguments": [
+        {
+          "name": "xIn",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "yIn",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "lpOut",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "recipient",
+          "type": {
+            "type-name": "Struct",
+            "name": "Either",
+            "elements": [
+              {
+                "name": "is_left",
+                "type": {
+                  "type-name": "Boolean"
+                }
+              },
+              {
+                "name": "left",
+                "type": {
+                  "type-name": "Struct",
+                  "name": "ZswapCoinPublicKey",
+                  "elements": [
+                    {
+                      "name": "bytes",
+                      "type": {
+                        "type-name": "Bytes",
+                        "length": 32
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "right",
+                "type": {
+                  "type-name": "Struct",
+                  "name": "ContractAddress",
+                  "elements": [
+                    {
+                      "name": "bytes",
+                      "type": {
+                        "type-name": "Bytes",
+                        "length": 32
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "nonce",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    },
+    {
+      "name": "removeLiquidity",
+      "pure": false,
+      "arguments": [
+        {
+          "name": "lpIn",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "xOut",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "yOut",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "recipient",
+          "type": {
+            "type-name": "Struct",
+            "name": "Either",
+            "elements": [
+              {
+                "name": "is_left",
+                "type": {
+                  "type-name": "Boolean"
+                }
+              },
+              {
+                "name": "left",
+                "type": {
+                  "type-name": "Struct",
+                  "name": "ZswapCoinPublicKey",
+                  "elements": [
+                    {
+                      "name": "bytes",
+                      "type": {
+                        "type-name": "Bytes",
+                        "length": 32
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "right",
+                "type": {
+                  "type-name": "Struct",
+                  "name": "ContractAddress",
+                  "elements": [
+                    {
+                      "name": "bytes",
+                      "type": {
+                        "type-name": "Bytes",
+                        "length": 32
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "nonce",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    },
+    {
+      "name": "swapXToY",
+      "pure": false,
+      "arguments": [
+        {
+          "name": "xIn",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "xFee",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "yOut",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "recipient",
+          "type": {
+            "type-name": "Struct",
+            "name": "Either",
+            "elements": [
+              {
+                "name": "is_left",
+                "type": {
+                  "type-name": "Boolean"
+                }
+              },
+              {
+                "name": "left",
+                "type": {
+                  "type-name": "Struct",
+                  "name": "ZswapCoinPublicKey",
+                  "elements": [
+                    {
+                      "name": "bytes",
+                      "type": {
+                        "type-name": "Bytes",
+                        "length": 32
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "right",
+                "type": {
+                  "type-name": "Struct",
+                  "name": "ContractAddress",
+                  "elements": [
+                    {
+                      "name": "bytes",
+                      "type": {
+                        "type-name": "Bytes",
+                        "length": 32
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "nonce",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    },
+    {
+      "name": "swapYToX",
+      "pure": false,
+      "arguments": [
+        {
+          "name": "yIn",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "xFee",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "xOut",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "recipient",
+          "type": {
+            "type-name": "Struct",
+            "name": "Either",
+            "elements": [
+              {
+                "name": "is_left",
+                "type": {
+                  "type-name": "Boolean"
+                }
+              },
+              {
+                "name": "left",
+                "type": {
+                  "type-name": "Struct",
+                  "name": "ZswapCoinPublicKey",
+                  "elements": [
+                    {
+                      "name": "bytes",
+                      "type": {
+                        "type-name": "Bytes",
+                        "length": 32
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "right",
+                "type": {
+                  "type-name": "Struct",
+                  "name": "ContractAddress",
+                  "elements": [
+                    {
+                      "name": "bytes",
+                      "type": {
+                        "type-name": "Bytes",
+                        "length": 32
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "nonce",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    }
+  ],
+  "witnesses": [
+  ],
+  "contracts": [
+  ]
+}

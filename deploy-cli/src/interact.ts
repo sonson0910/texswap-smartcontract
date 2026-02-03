@@ -9,7 +9,7 @@ import 'dotenv/config';
 import { randomBytes } from 'crypto';
 
 // Deployed contract address - update this after deployment
-const CONTRACT_ADDRESS = '6d61449206c9791ee78a72fb96125e706bd30042f8356697c95bfcbc4e93883f';
+const CONTRACT_ADDRESS = 'a7871813245b07113eaf5dc864c1f9f363bbd8a046f9ef2da3169c2b918a37ed';
 
 // Helper to convert hex string to Uint8Array for Bytes<32>
 function hexToBytes(hex: string): Uint8Array {
@@ -182,20 +182,15 @@ const run = async () => {
             }
 
             case 'init': {
-                const xAmount = BigInt(args[1] || '1000000');
-                const yAmount = BigInt(args[2] || '1000000');
-                const lpAmount = BigInt(args[3] || '1000000');
+                const xAmount = BigInt(args[1] || '500000');
+                const yAmount = BigInt(args[2] || '500000');
 
-                logger.info(`Initializing liquidity pool: X=${xAmount}, Y=${yAmount}, LP=${lpAmount}...`);
-                // Unshielded: Either<ContractAddress, UserAddress> - is_left=false means UserAddress (right side)
-                const walletAddrHex = 'f6dbd732b049eb493aa3fe43f2c77103ef0f66c19af067a26280ec3fa866aeb3';
-                const recipient = { is_left: false, left: { bytes: new Uint8Array(32) }, right: { bytes: hexToBytes(walletAddrHex) } };
+                logger.info(`Initializing liquidity pool: X=${xAmount}, Y=${yAmount}...`);
+                logger.info('NOTE: This only sets initial state. Call "add" after to get LP tokens.');
 
                 const txResult = await contract.callTx.initLiquidity(
                     xAmount,
-                    yAmount,
-                    lpAmount,
-                    recipient
+                    yAmount
                 );
                 logger.info(`Init liquidity TX submitted: ${JSON.stringify(txResult.public, (_, v) => typeof v === 'bigint' ? v.toString() : v)}`);
                 break;

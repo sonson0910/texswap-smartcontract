@@ -188,54 +188,38 @@ export class Contract {
         return { result: result_0, context: context, proofData: partialProofData, gasCost: context.gasCost };
       },
       initLiquidity: (...args_1) => {
-        if (args_1.length !== 5) {
-          throw new __compactRuntime.CompactError(`initLiquidity: expected 5 arguments (as invoked from Typescript), received ${args_1.length}`);
+        if (args_1.length !== 3) {
+          throw new __compactRuntime.CompactError(`initLiquidity: expected 3 arguments (as invoked from Typescript), received ${args_1.length}`);
         }
         const contextOrig_0 = args_1[0];
         const xIn_0 = args_1[1];
         const yIn_0 = args_1[2];
-        const lpOut_0 = args_1[3];
-        const recipient_0 = args_1[4];
         if (!(typeof(contextOrig_0) === 'object' && contextOrig_0.currentQueryContext != undefined)) {
           __compactRuntime.typeError('initLiquidity',
                                      'argument 1 (as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 94 char 1',
+                                     'FaucetAMMUnshielded2.compact line 93 char 1',
                                      'CircuitContext',
                                      contextOrig_0)
         }
         if (!(typeof(xIn_0) === 'bigint' && xIn_0 >= 0n && xIn_0 <= 18446744073709551615n)) {
           __compactRuntime.typeError('initLiquidity',
                                      'argument 1 (argument 2 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 94 char 1',
+                                     'FaucetAMMUnshielded2.compact line 93 char 1',
                                      'Uint<0..18446744073709551616>',
                                      xIn_0)
         }
         if (!(typeof(yIn_0) === 'bigint' && yIn_0 >= 0n && yIn_0 <= 18446744073709551615n)) {
           __compactRuntime.typeError('initLiquidity',
                                      'argument 2 (argument 3 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 94 char 1',
+                                     'FaucetAMMUnshielded2.compact line 93 char 1',
                                      'Uint<0..18446744073709551616>',
                                      yIn_0)
-        }
-        if (!(typeof(lpOut_0) === 'bigint' && lpOut_0 >= 0n && lpOut_0 <= 18446744073709551615n)) {
-          __compactRuntime.typeError('initLiquidity',
-                                     'argument 3 (argument 4 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 94 char 1',
-                                     'Uint<0..18446744073709551616>',
-                                     lpOut_0)
-        }
-        if (!(typeof(recipient_0) === 'object' && typeof(recipient_0.is_left) === 'boolean' && typeof(recipient_0.left) === 'object' && recipient_0.left.bytes.buffer instanceof ArrayBuffer && recipient_0.left.bytes.BYTES_PER_ELEMENT === 1 && recipient_0.left.bytes.length === 32 && typeof(recipient_0.right) === 'object' && recipient_0.right.bytes.buffer instanceof ArrayBuffer && recipient_0.right.bytes.BYTES_PER_ELEMENT === 1 && recipient_0.right.bytes.length === 32)) {
-          __compactRuntime.typeError('initLiquidity',
-                                     'argument 4 (argument 5 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 94 char 1',
-                                     'struct Either<is_left: Boolean, left: struct ContractAddress<bytes: Bytes<32>>, right: struct UserAddress<bytes: Bytes<32>>>',
-                                     recipient_0)
         }
         const context = { ...contextOrig_0, gasCost: __compactRuntime.emptyRunningCost() };
         const partialProofData = {
           input: {
-            value: _descriptor_4.toValue(xIn_0).concat(_descriptor_4.toValue(yIn_0).concat(_descriptor_4.toValue(lpOut_0).concat(_descriptor_7.toValue(recipient_0)))),
-            alignment: _descriptor_4.alignment().concat(_descriptor_4.alignment().concat(_descriptor_4.alignment().concat(_descriptor_7.alignment())))
+            value: _descriptor_4.toValue(xIn_0).concat(_descriptor_4.toValue(yIn_0)),
+            alignment: _descriptor_4.alignment().concat(_descriptor_4.alignment())
           },
           output: undefined,
           publicTranscript: [],
@@ -244,9 +228,7 @@ export class Contract {
         const result_0 = this._initLiquidity_0(context,
                                                partialProofData,
                                                xIn_0,
-                                               yIn_0,
-                                               lpOut_0,
-                                               recipient_0);
+                                               yIn_0);
         partialProofData.output = { value: [], alignment: [] };
         return { result: result_0, context: context, proofData: partialProofData, gasCost: context.gasCost };
       },
@@ -262,35 +244,35 @@ export class Contract {
         if (!(typeof(contextOrig_0) === 'object' && contextOrig_0.currentQueryContext != undefined)) {
           __compactRuntime.typeError('addLiquidity',
                                      'argument 1 (as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 115 char 1',
+                                     'FaucetAMMUnshielded2.compact line 104 char 1',
                                      'CircuitContext',
                                      contextOrig_0)
         }
         if (!(typeof(xIn_0) === 'bigint' && xIn_0 >= 0n && xIn_0 <= 18446744073709551615n)) {
           __compactRuntime.typeError('addLiquidity',
                                      'argument 1 (argument 2 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 115 char 1',
+                                     'FaucetAMMUnshielded2.compact line 104 char 1',
                                      'Uint<0..18446744073709551616>',
                                      xIn_0)
         }
         if (!(typeof(yIn_0) === 'bigint' && yIn_0 >= 0n && yIn_0 <= 18446744073709551615n)) {
           __compactRuntime.typeError('addLiquidity',
                                      'argument 2 (argument 3 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 115 char 1',
+                                     'FaucetAMMUnshielded2.compact line 104 char 1',
                                      'Uint<0..18446744073709551616>',
                                      yIn_0)
         }
         if (!(typeof(lpOut_0) === 'bigint' && lpOut_0 >= 0n && lpOut_0 <= 18446744073709551615n)) {
           __compactRuntime.typeError('addLiquidity',
                                      'argument 3 (argument 4 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 115 char 1',
+                                     'FaucetAMMUnshielded2.compact line 104 char 1',
                                      'Uint<0..18446744073709551616>',
                                      lpOut_0)
         }
         if (!(typeof(recipient_0) === 'object' && typeof(recipient_0.is_left) === 'boolean' && typeof(recipient_0.left) === 'object' && recipient_0.left.bytes.buffer instanceof ArrayBuffer && recipient_0.left.bytes.BYTES_PER_ELEMENT === 1 && recipient_0.left.bytes.length === 32 && typeof(recipient_0.right) === 'object' && recipient_0.right.bytes.buffer instanceof ArrayBuffer && recipient_0.right.bytes.BYTES_PER_ELEMENT === 1 && recipient_0.right.bytes.length === 32)) {
           __compactRuntime.typeError('addLiquidity',
                                      'argument 4 (argument 5 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 115 char 1',
+                                     'FaucetAMMUnshielded2.compact line 104 char 1',
                                      'struct Either<is_left: Boolean, left: struct ContractAddress<bytes: Bytes<32>>, right: struct UserAddress<bytes: Bytes<32>>>',
                                      recipient_0)
         }
@@ -325,35 +307,35 @@ export class Contract {
         if (!(typeof(contextOrig_0) === 'object' && contextOrig_0.currentQueryContext != undefined)) {
           __compactRuntime.typeError('removeLiquidity',
                                      'argument 1 (as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 164 char 1',
+                                     'FaucetAMMUnshielded2.compact line 153 char 1',
                                      'CircuitContext',
                                      contextOrig_0)
         }
         if (!(typeof(lpIn_0) === 'bigint' && lpIn_0 >= 0n && lpIn_0 <= 18446744073709551615n)) {
           __compactRuntime.typeError('removeLiquidity',
                                      'argument 1 (argument 2 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 164 char 1',
+                                     'FaucetAMMUnshielded2.compact line 153 char 1',
                                      'Uint<0..18446744073709551616>',
                                      lpIn_0)
         }
         if (!(typeof(xOut_0) === 'bigint' && xOut_0 >= 0n && xOut_0 <= 18446744073709551615n)) {
           __compactRuntime.typeError('removeLiquidity',
                                      'argument 2 (argument 3 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 164 char 1',
+                                     'FaucetAMMUnshielded2.compact line 153 char 1',
                                      'Uint<0..18446744073709551616>',
                                      xOut_0)
         }
         if (!(typeof(yOut_0) === 'bigint' && yOut_0 >= 0n && yOut_0 <= 18446744073709551615n)) {
           __compactRuntime.typeError('removeLiquidity',
                                      'argument 3 (argument 4 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 164 char 1',
+                                     'FaucetAMMUnshielded2.compact line 153 char 1',
                                      'Uint<0..18446744073709551616>',
                                      yOut_0)
         }
         if (!(typeof(recipient_0) === 'object' && typeof(recipient_0.is_left) === 'boolean' && typeof(recipient_0.left) === 'object' && recipient_0.left.bytes.buffer instanceof ArrayBuffer && recipient_0.left.bytes.BYTES_PER_ELEMENT === 1 && recipient_0.left.bytes.length === 32 && typeof(recipient_0.right) === 'object' && recipient_0.right.bytes.buffer instanceof ArrayBuffer && recipient_0.right.bytes.BYTES_PER_ELEMENT === 1 && recipient_0.right.bytes.length === 32)) {
           __compactRuntime.typeError('removeLiquidity',
                                      'argument 4 (argument 5 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 164 char 1',
+                                     'FaucetAMMUnshielded2.compact line 153 char 1',
                                      'struct Either<is_left: Boolean, left: struct ContractAddress<bytes: Bytes<32>>, right: struct UserAddress<bytes: Bytes<32>>>',
                                      recipient_0)
         }
@@ -388,35 +370,35 @@ export class Contract {
         if (!(typeof(contextOrig_0) === 'object' && contextOrig_0.currentQueryContext != undefined)) {
           __compactRuntime.typeError('swapXToY',
                                      'argument 1 (as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 204 char 1',
+                                     'FaucetAMMUnshielded2.compact line 193 char 1',
                                      'CircuitContext',
                                      contextOrig_0)
         }
         if (!(typeof(xIn_0) === 'bigint' && xIn_0 >= 0n && xIn_0 <= 18446744073709551615n)) {
           __compactRuntime.typeError('swapXToY',
                                      'argument 1 (argument 2 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 204 char 1',
+                                     'FaucetAMMUnshielded2.compact line 193 char 1',
                                      'Uint<0..18446744073709551616>',
                                      xIn_0)
         }
         if (!(typeof(xFee_0) === 'bigint' && xFee_0 >= 0n && xFee_0 <= 18446744073709551615n)) {
           __compactRuntime.typeError('swapXToY',
                                      'argument 2 (argument 3 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 204 char 1',
+                                     'FaucetAMMUnshielded2.compact line 193 char 1',
                                      'Uint<0..18446744073709551616>',
                                      xFee_0)
         }
         if (!(typeof(yOut_0) === 'bigint' && yOut_0 >= 0n && yOut_0 <= 18446744073709551615n)) {
           __compactRuntime.typeError('swapXToY',
                                      'argument 3 (argument 4 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 204 char 1',
+                                     'FaucetAMMUnshielded2.compact line 193 char 1',
                                      'Uint<0..18446744073709551616>',
                                      yOut_0)
         }
         if (!(typeof(recipient_0) === 'object' && typeof(recipient_0.is_left) === 'boolean' && typeof(recipient_0.left) === 'object' && recipient_0.left.bytes.buffer instanceof ArrayBuffer && recipient_0.left.bytes.BYTES_PER_ELEMENT === 1 && recipient_0.left.bytes.length === 32 && typeof(recipient_0.right) === 'object' && recipient_0.right.bytes.buffer instanceof ArrayBuffer && recipient_0.right.bytes.BYTES_PER_ELEMENT === 1 && recipient_0.right.bytes.length === 32)) {
           __compactRuntime.typeError('swapXToY',
                                      'argument 4 (argument 5 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 204 char 1',
+                                     'FaucetAMMUnshielded2.compact line 193 char 1',
                                      'struct Either<is_left: Boolean, left: struct ContractAddress<bytes: Bytes<32>>, right: struct UserAddress<bytes: Bytes<32>>>',
                                      recipient_0)
         }
@@ -451,35 +433,35 @@ export class Contract {
         if (!(typeof(contextOrig_0) === 'object' && contextOrig_0.currentQueryContext != undefined)) {
           __compactRuntime.typeError('swapYToX',
                                      'argument 1 (as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 238 char 1',
+                                     'FaucetAMMUnshielded2.compact line 227 char 1',
                                      'CircuitContext',
                                      contextOrig_0)
         }
         if (!(typeof(yIn_0) === 'bigint' && yIn_0 >= 0n && yIn_0 <= 18446744073709551615n)) {
           __compactRuntime.typeError('swapYToX',
                                      'argument 1 (argument 2 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 238 char 1',
+                                     'FaucetAMMUnshielded2.compact line 227 char 1',
                                      'Uint<0..18446744073709551616>',
                                      yIn_0)
         }
         if (!(typeof(xFee_0) === 'bigint' && xFee_0 >= 0n && xFee_0 <= 18446744073709551615n)) {
           __compactRuntime.typeError('swapYToX',
                                      'argument 2 (argument 3 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 238 char 1',
+                                     'FaucetAMMUnshielded2.compact line 227 char 1',
                                      'Uint<0..18446744073709551616>',
                                      xFee_0)
         }
         if (!(typeof(xOut_0) === 'bigint' && xOut_0 >= 0n && xOut_0 <= 18446744073709551615n)) {
           __compactRuntime.typeError('swapYToX',
                                      'argument 3 (argument 4 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 238 char 1',
+                                     'FaucetAMMUnshielded2.compact line 227 char 1',
                                      'Uint<0..18446744073709551616>',
                                      xOut_0)
         }
         if (!(typeof(recipient_0) === 'object' && typeof(recipient_0.is_left) === 'boolean' && typeof(recipient_0.left) === 'object' && recipient_0.left.bytes.buffer instanceof ArrayBuffer && recipient_0.left.bytes.BYTES_PER_ELEMENT === 1 && recipient_0.left.bytes.length === 32 && typeof(recipient_0.right) === 'object' && recipient_0.right.bytes.buffer instanceof ArrayBuffer && recipient_0.right.bytes.BYTES_PER_ELEMENT === 1 && recipient_0.right.bytes.length === 32)) {
           __compactRuntime.typeError('swapYToX',
                                      'argument 4 (argument 5 as invoked from Typescript)',
-                                     'FaucetAMMUnshielded2.compact line 238 char 1',
+                                     'FaucetAMMUnshielded2.compact line 227 char 1',
                                      'struct Either<is_left: Boolean, left: struct ContractAddress<bytes: Bytes<32>>, right: struct UserAddress<bytes: Bytes<32>>>',
                                      recipient_0)
         }
@@ -812,8 +794,7 @@ export class Contract {
                                 recipient_0);
     return [];
   }
-  _initLiquidity_0(context, partialProofData, xIn_0, yIn_0, lpOut_0, recipient_0)
-  {
+  _initLiquidity_0(context, partialProofData, xIn_0, yIn_0) {
     const tmp_0 = xIn_0;
     __compactRuntime.queryLedgerState(context,
                                       partialProofData,
@@ -836,7 +817,7 @@ export class Contract {
                                                  value: __compactRuntime.StateValue.newCell({ value: _descriptor_1.toValue(tmp_1),
                                                                                               alignment: _descriptor_1.alignment() }).encode() } },
                                        { ins: { cached: false, n: 1 } }]);
-    const tmp_2 = lpOut_0;
+    const tmp_2 = 1n;
     __compactRuntime.queryLedgerState(context,
                                       partialProofData,
                                       [
@@ -847,11 +828,6 @@ export class Contract {
                                                  value: __compactRuntime.StateValue.newCell({ value: _descriptor_1.toValue(tmp_2),
                                                                                               alignment: _descriptor_1.alignment() }).encode() } },
                                        { ins: { cached: false, n: 1 } }]);
-    this._mintUnshieldedToken_0(context,
-                                partialProofData,
-                                this._getLPTokenName_0(),
-                                lpOut_0,
-                                recipient_0);
     return [];
   }
   _addLiquidity_0(context, partialProofData, xIn_0, yIn_0, lpOut_0, recipient_0)
@@ -967,7 +943,7 @@ export class Contract {
     }
     const tmp_0 = ((t1) => {
                     if (t1 > 340282366920938463463374607431768211455n) {
-                      throw new __compactRuntime.CompactError('FaucetAMMUnshielded2.compact line 137 char 27: cast from Field or Uint value to smaller Uint value failed: ' + t1 + ' is greater than 340282366920938463463374607431768211455');
+                      throw new __compactRuntime.CompactError('FaucetAMMUnshielded2.compact line 126 char 27: cast from Field or Uint value to smaller Uint value failed: ' + t1 + ' is greater than 340282366920938463463374607431768211455');
                     }
                     return t1;
                   })(_descriptor_1.fromValue(__compactRuntime.queryLedgerState(context,
@@ -1013,7 +989,7 @@ export class Contract {
                                                                                                               result: undefined } }]).value));
     const tmp_1 = ((t1) => {
                     if (t1 > 340282366920938463463374607431768211455n) {
-                      throw new __compactRuntime.CompactError('FaucetAMMUnshielded2.compact line 146 char 18: cast from Field or Uint value to smaller Uint value failed: ' + t1 + ' is greater than 340282366920938463463374607431768211455');
+                      throw new __compactRuntime.CompactError('FaucetAMMUnshielded2.compact line 135 char 18: cast from Field or Uint value to smaller Uint value failed: ' + t1 + ' is greater than 340282366920938463463374607431768211455');
                     }
                     return t1;
                   })(_descriptor_1.fromValue(__compactRuntime.queryLedgerState(context,
@@ -1047,7 +1023,7 @@ export class Contract {
                                 contractAddr_0);
     const tmp_2 = ((t1) => {
                     if (t1 > 340282366920938463463374607431768211455n) {
-                      throw new __compactRuntime.CompactError('FaucetAMMUnshielded2.compact line 154 char 18: cast from Field or Uint value to smaller Uint value failed: ' + t1 + ' is greater than 340282366920938463463374607431768211455');
+                      throw new __compactRuntime.CompactError('FaucetAMMUnshielded2.compact line 143 char 18: cast from Field or Uint value to smaller Uint value failed: ' + t1 + ' is greater than 340282366920938463463374607431768211455');
                     }
                     return t1;
                   })(_descriptor_1.fromValue(__compactRuntime.queryLedgerState(context,
@@ -1295,7 +1271,7 @@ export class Contract {
                                                                                                               result: undefined } }]).value));
     const tmp_0 = ((t1) => {
                     if (t1 > 340282366920938463463374607431768211455n) {
-                      throw new __compactRuntime.CompactError('FaucetAMMUnshielded2.compact line 216 char 16: cast from Field or Uint value to smaller Uint value failed: ' + t1 + ' is greater than 340282366920938463463374607431768211455');
+                      throw new __compactRuntime.CompactError('FaucetAMMUnshielded2.compact line 205 char 16: cast from Field or Uint value to smaller Uint value failed: ' + t1 + ' is greater than 340282366920938463463374607431768211455');
                     }
                     return t1;
                   })(_descriptor_1.fromValue(__compactRuntime.queryLedgerState(context,
@@ -1324,7 +1300,7 @@ export class Contract {
                                        { ins: { cached: false, n: 1 } }]);
     const tmp_1 = ((t1) => {
                     if (t1 > 340282366920938463463374607431768211455n) {
-                      throw new __compactRuntime.CompactError('FaucetAMMUnshielded2.compact line 217 char 18: cast from Field or Uint value to smaller Uint value failed: ' + t1 + ' is greater than 340282366920938463463374607431768211455');
+                      throw new __compactRuntime.CompactError('FaucetAMMUnshielded2.compact line 206 char 18: cast from Field or Uint value to smaller Uint value failed: ' + t1 + ' is greater than 340282366920938463463374607431768211455');
                     }
                     return t1;
                   })(_descriptor_1.fromValue(__compactRuntime.queryLedgerState(context,
@@ -1479,7 +1455,7 @@ export class Contract {
                                                                                                            result: undefined } }]).value));
     const tmp_0 = ((t1) => {
                     if (t1 > 340282366920938463463374607431768211455n) {
-                      throw new __compactRuntime.CompactError('FaucetAMMUnshielded2.compact line 249 char 16: cast from Field or Uint value to smaller Uint value failed: ' + t1 + ' is greater than 340282366920938463463374607431768211455');
+                      throw new __compactRuntime.CompactError('FaucetAMMUnshielded2.compact line 238 char 16: cast from Field or Uint value to smaller Uint value failed: ' + t1 + ' is greater than 340282366920938463463374607431768211455');
                     }
                     return t1;
                   })(_descriptor_1.fromValue(__compactRuntime.queryLedgerState(context,
@@ -1552,7 +1528,7 @@ export class Contract {
                                                                                                               result: undefined } }]).value));
     const tmp_2 = ((t1) => {
                     if (t1 > 340282366920938463463374607431768211455n) {
-                      throw new __compactRuntime.CompactError('FaucetAMMUnshielded2.compact line 259 char 18: cast from Field or Uint value to smaller Uint value failed: ' + t1 + ' is greater than 340282366920938463463374607431768211455');
+                      throw new __compactRuntime.CompactError('FaucetAMMUnshielded2.compact line 248 char 18: cast from Field or Uint value to smaller Uint value failed: ' + t1 + ' is greater than 340282366920938463463374607431768211455');
                     }
                     return t1;
                   })(_descriptor_1.fromValue(__compactRuntime.queryLedgerState(context,

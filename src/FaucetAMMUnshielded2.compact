@@ -88,27 +88,16 @@ export circuit mintTestTokensY(
 // LIQUIDITY FUNCTIONS
 // ============================================
 
-// Initialize liquidity pool - SIMPLIFIED VERSION
-// Only updates ledger state and mints LP tokens
-// No assertions to reduce circuit complexity
+// Initialize liquidity pool - ABSOLUTE MINIMUM (no asserts, no minting)
+// CRITICAL: This only sets initial state. To get LP tokens, call addLiquidity after init.
 export circuit initLiquidity(
     xIn: Uint<64>,
-    yIn: Uint<64>,
-    lpOut: Uint<64>,
-    recipient: Either<ContractAddress, UserAddress>
+    yIn: Uint<64>
 ): [] {
-    // Simple initialization - just set values and mint LP tokens
-    // Update ledger state
+    // Absolute bare minimum - just 3 state assignments
     xLiquidity = disclose(xIn);
     yLiquidity = disclose(yIn);
-    lpCirculatingSupply = disclose(lpOut);
-    
-    // mint and send lp tokens to recipient (unshielded)
-    mintUnshieldedToken(
-        getLPTokenName(),
-        disclose(lpOut),
-        disclose(recipient)
-    );
+    lpCirculatingSupply = 1;
 }
 
 // Add liquidity to existing pool

@@ -18,12 +18,7 @@ export type ImpureCircuits<PS> = {
                                }): __compactRuntime.CircuitResults<PS, []>;
   initLiquidity(context: __compactRuntime.CircuitContext<PS>,
                 xIn_0: bigint,
-                yIn_0: bigint,
-                lpOut_0: bigint,
-                recipient_0: { is_left: boolean,
-                               left: { bytes: Uint8Array },
-                               right: { bytes: Uint8Array }
-                             }): __compactRuntime.CircuitResults<PS, []>;
+                yIn_0: bigint): __compactRuntime.CircuitResults<PS, []>;
   addLiquidity(context: __compactRuntime.CircuitContext<PS>,
                xIn_0: bigint,
                yIn_0: bigint,
@@ -76,12 +71,7 @@ export type Circuits<PS> = {
                                }): __compactRuntime.CircuitResults<PS, []>;
   initLiquidity(context: __compactRuntime.CircuitContext<PS>,
                 xIn_0: bigint,
-                yIn_0: bigint,
-                lpOut_0: bigint,
-                recipient_0: { is_left: boolean,
-                               left: { bytes: Uint8Array },
-                               right: { bytes: Uint8Array }
-                             }): __compactRuntime.CircuitResults<PS, []>;
+                yIn_0: bigint): __compactRuntime.CircuitResults<PS, []>;
   addLiquidity(context: __compactRuntime.CircuitContext<PS>,
                xIn_0: bigint,
                yIn_0: bigint,
