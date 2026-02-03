@@ -12,7 +12,11 @@ import {
 import { type Config, contractConfig } from './config.js';
 
 // Import the FaucetAMMUnshielded contract and wrap with CompiledContract API
-import { Contract, ledger } from '../dist/faucet-amm-unshielded/contract/index.js';
+// Use namespace import since module has no default export
+// IMPORTANT: Import from local dist/ (not root build/) to use same node_modules
+import * as FaucetAMMContractModule from '../dist/faucet-amm-unshielded/contract/index.js';
+const Contract = FaucetAMMContractModule.Contract;
+const ledger = FaucetAMMContractModule.ledger;
 
 import { type ContractAddress } from '@midnight-ntwrk/compact-runtime';
 import * as CompiledContract from '@midnight-ntwrk/compact-js/effect/CompiledContract';
