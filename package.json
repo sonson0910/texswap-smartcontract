@@ -15,6 +15,7 @@
     "build:faucet-amm-v2": "compact compile ./src/FaucetAMMv2.compact ./dist/faucet-amm-v2",
     "build:faucet-amm-unshielded": "compact compile ./src/FaucetAMMUnshielded.compact ./dist/faucet-amm-unshielded",
     "build:faucet": "compactc ./src/Faucet.compact ./dist/faucet",
+    "build:deploy": "compact compile ./src/FaucetAMMUnshielded.compact build/FaucetAMMUnshielded && mkdir -p deploy-cli/dist/faucet-amm-unshielded && cp -r build/FaucetAMMUnshielded/* deploy-cli/dist/faucet-amm-unshielded/",
     "test": "bun test"
   },
   "keywords": [],

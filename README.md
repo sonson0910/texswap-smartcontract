@@ -65,25 +65,18 @@ cd deploy-cli
 npm install
 ```
 
-### 4. Compile Contract
+### 4. Build & Deploy Contract
 From the project root:
 ```bash
-compact compile src/FaucetAMMUnshielded.compact build/FaucetAMMUnshielded
-```
-*Note: This generates the `.zk` and `.compact` artifacts in `build/`.*
+# Compile + Copy artifacts in one step
+pnpm run build:deploy
 
-### 5. Deploy Contract
-Build and deploy the contract to the Preview network:
-
-```bash
-# Copy artifacts to dist
-mkdir -p deploy-cli/dist/faucet-amm-unshielded
-cp -r build/FaucetAMMUnshielded/* deploy-cli/dist/faucet-amm-unshielded/
-
-# Run deployment
+# Deploy to Preview network
 cd deploy-cli
 npm run deploy
 ```
+
+*Note: `build:deploy` compiles to `build/` and copies to `deploy-cli/dist/` for correct module resolution.*
 
 ## 💻 CLI Usage
 
